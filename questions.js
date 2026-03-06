@@ -12,138 +12,575 @@ const surveyStructure = {
         { value: 5, label: "Strongly Agree" }
     ],
     items: [
-        // --- Neuroticism: Volatility ---
-        { text: "I get angry easily.", domain: "Neuroticism", aspect: "Volatility" },
-        { text: "I rarely get irritated.", domain: "Neuroticism", aspect: "Volatility", reverse: true },
-        { text: "I get upset easily.", domain: "Neuroticism", aspect: "Volatility" },
-        { text: "I keep my emotions under control.", domain: "Neuroticism", aspect: "Volatility", reverse: true },
-        { text: "I change my mood a lot.", domain: "Neuroticism", aspect: "Volatility" },
-        { text: "I rarely lose my composure.", domain: "Neuroticism", aspect: "Volatility", reverse: true },
-        { text: "I am a person whose moods go up and down easily.", domain: "Neuroticism", aspect: "Volatility" },
-        { text: "I am not easily annoyed.", domain: "Neuroticism", aspect: "Volatility", reverse: true },
-        { text: "I get easily agitated.", domain: "Neuroticism", aspect: "Volatility" },
-        { text: "I can be stirred up easily.", domain: "Neuroticism", aspect: "Volatility" },
-
-        // --- Neuroticism: Withdrawal ---
-        { text: "I seldom feel blue.", domain: "Neuroticism", aspect: "Withdrawal", reverse: true },
-        { text: "I am filled with doubts about things.", domain: "Neuroticism", aspect: "Withdrawal" },
-        { text: "I feel comfortable with myself.", domain: "Neuroticism", aspect: "Withdrawal", reverse: true },
-        { text: "I feel threatened easily.", domain: "Neuroticism", aspect: "Withdrawal" },
-        { text: "I rarely feel depressed.", domain: "Neuroticism", aspect: "Withdrawal", reverse: true },
-        { text: "I worry about things.", domain: "Neuroticism", aspect: "Withdrawal" },
-        { text: "I am easily discouraged.", domain: "Neuroticism", aspect: "Withdrawal" },
-        { text: "I am not embarrassed easily.", domain: "Neuroticism", aspect: "Withdrawal", reverse: true },
-        { text: "I become overwhelmed by events.", domain: "Neuroticism", aspect: "Withdrawal" },
-        { text: "I am afraid of many things.", domain: "Neuroticism", aspect: "Withdrawal" },
-
-        // --- Agreeableness: Compassion ---
-        { text: "I am not interested in other people’s problems.", domain: "Agreeableness", aspect: "Compassion", reverse: true },
-        { text: "I feel others’ emotions.", domain: "Agreeableness", aspect: "Compassion" },
-        { text: "I inquire about others’ well-being.", domain: "Agreeableness", aspect: "Compassion" },
-        { text: "I can’t be bothered with others’ needs.", domain: "Agreeableness", aspect: "Compassion", reverse: true },
-        { text: "I sympathize with others’ feelings.", domain: "Agreeableness", aspect: "Compassion" },
-        { text: "I am indifferent to the feelings of others.", domain: "Agreeableness", aspect: "Compassion", reverse: true },
-        { text: "I take no time for others.", domain: "Agreeableness", aspect: "Compassion", reverse: true },
-        { text: "I take an interest in other people’s lives.", domain: "Agreeableness", aspect: "Compassion" },
-        { text: "I don’t have a soft side.", domain: "Agreeableness", aspect: "Compassion", reverse: true },
-        { text: "I like to do things for others.", domain: "Agreeableness", aspect: "Compassion" },
-
-        // --- Agreeableness: Politeness ---
-        { text: "I respect authority.", domain: "Agreeableness", aspect: "Politeness" },
-        { text: "I insult people.", domain: "Agreeableness", aspect: "Politeness", reverse: true },
-        { text: "I hate to seem pushy.", domain: "Agreeableness", aspect: "Politeness" },
-        // Item 33
-        // --- CONTROL 1 ---
-        { text: "Please select 'Agree' for this item.", type: "control", target: 4 },
-
-        { text: "I believe that I am better than others.", domain: "Agreeableness", aspect: "Politeness", reverse: true },
-        { text: "I avoid imposing my will on others.", domain: "Agreeableness", aspect: "Politeness" },
-        { text: "I rarely put people under pressure.", domain: "Agreeableness", aspect: "Politeness" },
-        { text: "I take advantage of others.", domain: "Agreeableness", aspect: "Politeness", reverse: true },
-        { text: "I seek conflict.", domain: "Agreeableness", aspect: "Politeness", reverse: true },
-        { text: "I love a good fight.", domain: "Agreeableness", aspect: "Politeness", reverse: true },
-        { text: "I am out for my own personal gain.", domain: "Agreeableness", aspect: "Politeness", reverse: true },
-
-        // --- Conscientiousness: Industriousness ---
-        { text: "I carry out my plans.", domain: "Conscientiousness", aspect: "Industriousness" },
-        { text: "I waste my time.", domain: "Conscientiousness", aspect: "Industriousness", reverse: true },
-        { text: "I find it difficult to get down to work.", domain: "Conscientiousness", aspect: "Industriousness", reverse: true },
-        { text: "I mess things up.", domain: "Conscientiousness", aspect: "Industriousness", reverse: true },
-        { text: "I finish what I start.", domain: "Conscientiousness", aspect: "Industriousness" },
-        { text: "I don’t put my mind on the task at hand.", domain: "Conscientiousness", aspect: "Industriousness", reverse: true },
-        { text: "I get things done quickly.", domain: "Conscientiousness", aspect: "Industriousness" },
-        { text: "I always know what I am doing.", domain: "Conscientiousness", aspect: "Industriousness" },
-        { text: "I postpone decisions.", domain: "Conscientiousness", aspect: "Industriousness", reverse: true },
-        { text: "I am easily distracted.", domain: "Conscientiousness", aspect: "Industriousness", reverse: true },
-
-        // --- Conscientiousness: Orderliness ---
-        { text: "I leave my belongings around.", domain: "Conscientiousness", aspect: "Orderliness", reverse: true },
-        { text: "I like order.", domain: "Conscientiousness", aspect: "Orderliness" },
-        { text: "I keep things tidy.", domain: "Conscientiousness", aspect: "Orderliness" },
-        { text: "I follow a schedule.", domain: "Conscientiousness", aspect: "Orderliness" },
-        { text: "I am not bothered by messy people.", domain: "Conscientiousness", aspect: "Orderliness", reverse: true },
-        { text: "I want everything to be “just right.”", domain: "Conscientiousness", aspect: "Orderliness" },
-        { text: "I am not bothered by disorder.", domain: "Conscientiousness", aspect: "Orderliness", reverse: true },
-        { text: "I dislike routine.", domain: "Conscientiousness", aspect: "Orderliness", reverse: true },
-        { text: "I see that rules are observed.", domain: "Conscientiousness", aspect: "Orderliness" },
-        { text: "I want every detail taken care of.", domain: "Conscientiousness", aspect: "Orderliness" },
-        // Item 66
-        // --- CONTROL 2 ---
-        { text: "Please select 'Strongly Disagree' for this item.", type: "control", target: 1 },
-
-        // --- Extraversion: Enthusiasm ---
-        { text: "I make friends easily.", domain: "Extraversion", aspect: "Enthusiasm" },
-        { text: "I am hard to get to know.", domain: "Extraversion", aspect: "Enthusiasm", reverse: true },
-        { text: "I keep others at a distance.", domain: "Extraversion", aspect: "Enthusiasm", reverse: true },
-        { text: "I reveal little about myself.", domain: "Extraversion", aspect: "Enthusiasm", reverse: true },
-        { text: "I warm up quickly to others.", domain: "Extraversion", aspect: "Enthusiasm" },
-        { text: "I rarely get caught up in the excitement.", domain: "Extraversion", aspect: "Enthusiasm", reverse: true },
-        { text: "I am not a very enthusiastic person.", domain: "Extraversion", aspect: "Enthusiasm", reverse: true },
-        { text: "I show my feelings when I’m happy.", domain: "Extraversion", aspect: "Enthusiasm" },
-        { text: "I have a lot of fun.", domain: "Extraversion", aspect: "Enthusiasm" },
-        { text: "I laugh a lot.", domain: "Extraversion", aspect: "Enthusiasm" },
-
-        // --- Extraversion: Assertiveness ---
-        { text: "I take charge.", domain: "Extraversion", aspect: "Assertiveness" },
-        { text: "I have a strong personality.", domain: "Extraversion", aspect: "Assertiveness" },
-        { text: "I lack the talent for influencing people.", domain: "Extraversion", aspect: "Assertiveness", reverse: true },
-        { text: "I know how to captivate people.", domain: "Extraversion", aspect: "Assertiveness" },
-        { text: "I wait for others to lead the way.", domain: "Extraversion", aspect: "Assertiveness", reverse: true },
-        { text: "I see myself as a good leader.", domain: "Extraversion", aspect: "Assertiveness" },
-        { text: "I can talk others into doing things.", domain: "Extraversion", aspect: "Assertiveness" },
-        { text: "I hold back my opinions.", domain: "Extraversion", aspect: "Assertiveness", reverse: true },
-        { text: "I am the first to act.", domain: "Extraversion", aspect: "Assertiveness" },
-        { text: "I do not have an assertive personality.", domain: "Extraversion", aspect: "Assertiveness", reverse: true },
-
-        // --- Openness/Intellect: Intellect ---
-        { text: "I am quick to understand things.", domain: "Openness", aspect: "Intellect" },
-        { text: "I have difficulty understanding abstract ideas.", domain: "Openness", aspect: "Intellect", reverse: true },
-        { text: "I can handle a lot of information.", domain: "Openness", aspect: "Intellect" },
-        { text: "I like to solve complex problems.", domain: "Openness", aspect: "Intellect" },
-        { text: "I avoid philosophical discussions.", domain: "Openness", aspect: "Intellect", reverse: true },
-        { text: "I avoid difficult reading material.", domain: "Openness", aspect: "Intellect", reverse: true },
-        { text: "I have a rich vocabulary.", domain: "Openness", aspect: "Intellect" },
-        { text: "I think quickly.", domain: "Openness", aspect: "Intellect" },
-        { text: "I learn things slowly.", domain: "Openness", aspect: "Intellect", reverse: true },
-        { text: "I formulate ideas clearly.", domain: "Openness", aspect: "Intellect" },
-
-        // --- Openness/Intellect: Openness ---
-        { text: "I enjoy the beauty of nature.", domain: "Openness", aspect: "Openness" },
-        { text: "I believe in the importance of art.", domain: "Openness", aspect: "Openness" },
-        { text: "I love to reflect on things.", domain: "Openness", aspect: "Openness" },
-        { text: "I get deeply immersed in music.", domain: "Openness", aspect: "Openness" },
-        { text: "I do not like poetry.", domain: "Openness", aspect: "Openness", reverse: true },
-        { text: "I see beauty in things that others might not notice.", domain: "Openness", aspect: "Openness" },
-        { text: "I need a creative outlet.", domain: "Openness", aspect: "Openness" },
-        { text: "I seldom get lost in thought.", domain: "Openness", aspect: "Openness", reverse: true },
-        { text: "I seldom daydream.", domain: "Openness", aspect: "Openness", reverse: true },
-        { text: "I seldom notice the emotional aspects of paintings and pictures.", domain: "Openness", aspect: "Openness", reverse: true },
-
-        // --- FILLER ---
-        { text: "I enjoy watching the weather report.", type: "filler" },
-        { text: "I prefer drinking water over soda.", type: "filler" },
-        { text: "I like to eat pizza.", type: "filler" }
-    ]
+    {
+        "text": "I do not have an assertive personality.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness",
+        "reverse": true
+    },
+    {
+        "text": "I postpone decisions.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness",
+        "reverse": true
+    },
+    {
+        "text": "I mess things up.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness",
+        "reverse": true
+    },
+    {
+        "text": "I find it difficult to get down to work.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness",
+        "reverse": true
+    },
+    {
+        "text": "I warm up quickly to others.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm"
+    },
+    {
+        "text": "I learn things slowly.",
+        "domain": "Openness",
+        "aspect": "Intellect",
+        "reverse": true
+    },
+    {
+        "text": "I hate to seem pushy.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness"
+    },
+    {
+        "text": "I am afraid of many things.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal"
+    },
+    {
+        "text": "I enjoy the beauty of nature.",
+        "domain": "Openness",
+        "aspect": "Openness"
+    },
+    {
+        "text": "I feel threatened easily.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal"
+    },
+    {
+        "text": "Please select 'Strongly Disagree' for this item.",
+        "type": "control",
+        "target": 1
+    },
+    {
+        "text": "I am hard to get to know.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm",
+        "reverse": true
+    },
+    {
+        "text": "I inquire about others’ well-being.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion"
+    },
+    {
+        "text": "I am easily distracted.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness",
+        "reverse": true
+    },
+    {
+        "text": "I am not a very enthusiastic person.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm",
+        "reverse": true
+    },
+    {
+        "text": "I lack the talent for influencing people.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness",
+        "reverse": true
+    },
+    {
+        "text": "I get upset easily.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility"
+    },
+    {
+        "text": "I get angry easily.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility"
+    },
+    {
+        "text": "I keep things tidy.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness"
+    },
+    {
+        "text": "I can handle a lot of information.",
+        "domain": "Openness",
+        "aspect": "Intellect"
+    },
+    {
+        "text": "I feel comfortable with myself.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal",
+        "reverse": true
+    },
+    {
+        "text": "I take no time for others.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion",
+        "reverse": true
+    },
+    {
+        "text": "I change my mood a lot.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility"
+    },
+    {
+        "text": "I keep others at a distance.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm",
+        "reverse": true
+    },
+    {
+        "text": "I love to reflect on things.",
+        "domain": "Openness",
+        "aspect": "Openness"
+    },
+    {
+        "text": "I become overwhelmed by events.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal"
+    },
+    {
+        "text": "I want everything to be “just right.”",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness"
+    },
+    {
+        "text": "I enjoy watching the weather report.",
+        "type": "filler"
+    },
+    {
+        "text": "I always know what I am doing.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness"
+    },
+    {
+        "text": "I take charge.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness"
+    },
+    {
+        "text": "I get things done quickly.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness"
+    },
+    {
+        "text": "I respect authority.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness"
+    },
+    {
+        "text": "I keep my emotions under control.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility",
+        "reverse": true
+    },
+    {
+        "text": "I take an interest in other people’s lives.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion"
+    },
+    {
+        "text": "I see myself as a good leader.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness"
+    },
+    {
+        "text": "I am easily discouraged.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal"
+    },
+    {
+        "text": "I want every detail taken care of.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness"
+    },
+    {
+        "text": "I have a strong personality.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness"
+    },
+    {
+        "text": "I am indifferent to the feelings of others.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion",
+        "reverse": true
+    },
+    {
+        "text": "I seldom notice the emotional aspects of paintings and pictures.",
+        "domain": "Openness",
+        "aspect": "Openness",
+        "reverse": true
+    },
+    {
+        "text": "I am filled with doubts about things.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal"
+    },
+    {
+        "text": "I am quick to understand things.",
+        "domain": "Openness",
+        "aspect": "Intellect"
+    },
+    {
+        "text": "I like to do things for others.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion"
+    },
+    {
+        "text": "I get easily agitated.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility"
+    },
+    {
+        "text": "I rarely feel depressed.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal",
+        "reverse": true
+    },
+    {
+        "text": "I show my feelings when I’m happy.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm"
+    },
+    {
+        "text": "I seldom get lost in thought.",
+        "domain": "Openness",
+        "aspect": "Openness",
+        "reverse": true
+    },
+    {
+        "text": "I see that rules are observed.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness"
+    },
+    {
+        "text": "I don’t have a soft side.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion",
+        "reverse": true
+    },
+    {
+        "text": "I worry about things.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal"
+    },
+    {
+        "text": "I believe that I am better than others.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness",
+        "reverse": true
+    },
+    {
+        "text": "I like to eat pizza.",
+        "type": "filler"
+    },
+    {
+        "text": "I believe in the importance of art.",
+        "domain": "Openness",
+        "aspect": "Openness"
+    },
+    {
+        "text": "I am not embarrassed easily.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal",
+        "reverse": true
+    },
+    {
+        "text": "I insult people.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness",
+        "reverse": true
+    },
+    {
+        "text": "I rarely lose my composure.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility",
+        "reverse": true
+    },
+    {
+        "text": "I formulate ideas clearly.",
+        "domain": "Openness",
+        "aspect": "Intellect"
+    },
+    {
+        "text": "I dislike routine.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness",
+        "reverse": true
+    },
+    {
+        "text": "I take advantage of others.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness",
+        "reverse": true
+    },
+    {
+        "text": "I don’t put my mind on the task at hand.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness",
+        "reverse": true
+    },
+    {
+        "text": "I am a person whose moods go up and down easily.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility"
+    },
+    {
+        "text": "I am out for my own personal gain.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness",
+        "reverse": true
+    },
+    {
+        "text": "I rarely get irritated.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility",
+        "reverse": true
+    },
+    {
+        "text": "I sympathize with others’ feelings.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion"
+    },
+    {
+        "text": "I know how to captivate people.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness"
+    },
+    {
+        "text": "I need a creative outlet.",
+        "domain": "Openness",
+        "aspect": "Openness"
+    },
+    {
+        "text": "I do not like poetry.",
+        "domain": "Openness",
+        "aspect": "Openness",
+        "reverse": true
+    },
+    {
+        "text": "I think quickly.",
+        "domain": "Openness",
+        "aspect": "Intellect"
+    },
+    {
+        "text": "I leave my belongings around.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness",
+        "reverse": true
+    },
+    {
+        "text": "I like order.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness"
+    },
+    {
+        "text": "I am not easily annoyed.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility",
+        "reverse": true
+    },
+    {
+        "text": "I have difficulty understanding abstract ideas.",
+        "domain": "Openness",
+        "aspect": "Intellect",
+        "reverse": true
+    },
+    {
+        "text": "I carry out my plans.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness"
+    },
+    {
+        "text": "I can talk others into doing things.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness"
+    },
+    {
+        "text": "I have a rich vocabulary.",
+        "domain": "Openness",
+        "aspect": "Intellect"
+    },
+    {
+        "text": "I get deeply immersed in music.",
+        "domain": "Openness",
+        "aspect": "Openness"
+    },
+    {
+        "text": "I avoid difficult reading material.",
+        "domain": "Openness",
+        "aspect": "Intellect",
+        "reverse": true
+    },
+    {
+        "text": "I avoid imposing my will on others.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness"
+    },
+    {
+        "text": "I make friends easily.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm"
+    },
+    {
+        "text": "I rarely put people under pressure.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness"
+    },
+    {
+        "text": "I waste my time.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness",
+        "reverse": true
+    },
+    {
+        "text": "I hold back my opinions.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness",
+        "reverse": true
+    },
+    {
+        "text": "I feel others’ emotions.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion"
+    },
+    {
+        "text": "I follow a schedule.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness"
+    },
+    {
+        "text": "I reveal little about myself.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm",
+        "reverse": true
+    },
+    {
+        "text": "I see beauty in things that others might not notice.",
+        "domain": "Openness",
+        "aspect": "Openness"
+    },
+    {
+        "text": "I seldom feel blue.",
+        "domain": "Neuroticism",
+        "aspect": "Withdrawal",
+        "reverse": true
+    },
+    {
+        "text": "I love a good fight.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness",
+        "reverse": true
+    },
+    {
+        "text": "I can’t be bothered with others’ needs.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion",
+        "reverse": true
+    },
+    {
+        "text": "I prefer drinking water over soda.",
+        "type": "filler"
+    },
+    {
+        "text": "I am not bothered by disorder.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness",
+        "reverse": true
+    },
+    {
+        "text": "I wait for others to lead the way.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness",
+        "reverse": true
+    },
+    {
+        "text": "I am not bothered by messy people.",
+        "domain": "Conscientiousness",
+        "aspect": "Orderliness",
+        "reverse": true
+    },
+    {
+        "text": "I laugh a lot.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm"
+    },
+    {
+        "text": "I seek conflict.",
+        "domain": "Agreeableness",
+        "aspect": "Politeness",
+        "reverse": true
+    },
+    {
+        "text": "I am the first to act.",
+        "domain": "Extraversion",
+        "aspect": "Assertiveness"
+    },
+    {
+        "text": "I can be stirred up easily.",
+        "domain": "Neuroticism",
+        "aspect": "Volatility"
+    },
+    {
+        "text": "I like to solve complex problems.",
+        "domain": "Openness",
+        "aspect": "Intellect"
+    },
+    {
+        "text": "I finish what I start.",
+        "domain": "Conscientiousness",
+        "aspect": "Industriousness"
+    },
+    {
+        "text": "I rarely get caught up in the excitement.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm",
+        "reverse": true
+    },
+    {
+        "text": "I am not interested in other people’s problems.",
+        "domain": "Agreeableness",
+        "aspect": "Compassion",
+        "reverse": true
+    },
+    {
+        "text": "I seldom daydream.",
+        "domain": "Openness",
+        "aspect": "Openness",
+        "reverse": true
+    },
+    {
+        "text": "I have a lot of fun.",
+        "domain": "Extraversion",
+        "aspect": "Enthusiasm"
+    },
+    {
+        "text": "I avoid philosophical discussions.",
+        "domain": "Openness",
+        "aspect": "Intellect",
+        "reverse": true
+    },
+    {
+        "text": "Please select 'Agree' for this item.",
+        "type": "control",
+        "target": 4
+    }
+]
 };
 
 // Interpretation Data
