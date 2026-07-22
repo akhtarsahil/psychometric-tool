@@ -212,6 +212,18 @@ button#submit-btn:hover {
     opacity: 1;
 }
 
+#next-btn:hover {
+    background: #e55f00 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.35);
+}
+
+#submit-btn:hover {
+    background: #e60073 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(255, 0, 127, 0.35);
+}
+
 /* Results Split Layout */
 .section-title {
     text-align: center;
@@ -229,6 +241,63 @@ button#submit-btn:hover {
     color: #7f8c8d;
     margin-top: -20px;
     margin-bottom: 40px;
+}
+
+/* Core Profile Synthesis Section */
+.synthesis-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-left: 6px solid #8e44ad;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.synthesis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.synthesis-header h2 {
+    margin: 0;
+    font-size: 1.6em;
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.synthesis-header .synthesis-subtitle {
+    font-size: 0.9em;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.synthesis-body p {
+    font-size: 1.05em;
+    line-height: 1.75;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.synthesis-body p:last-child {
+    margin-bottom: 0;
+}
+
+.synthesis-highlight {
+    font-weight: 600;
+    color: #1e293b;
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
 /* 1. Profile Grid */
@@ -512,4 +581,100 @@ button#submit-btn:hover {
 .mini-fill {
     height: 100%;
     background: #3498db;
+}
+
+/* Page Break & PDF Export Protection */
+.synthesis-card,
+.domain-summary-card,
+.insight-card,
+.matrix-card,
+.layer1-card,
+.results-header,
+.habits-box,
+.advice-box,
+.layer1-grid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+h2.section-title {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+p.section-desc {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+}
+
+/* PDF Export Specific Layout Rules */
+.pdf-export-mode .profile-grid {
+    display: block !important;
+}
+
+.pdf-export-mode .domain-summary-card {
+    margin-bottom: 25px !important;
+}
+
+.pdf-export-mode h2.section-title {
+    margin-top: 40px !important;
+}
+
+.synthesis-card,
+.domain-summary-card,
+.insight-card,
+.matrix-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* PDF Mode Flat Layout Protection */
+.pdf-mode .profile-grid,
+.pdf-mode .layer1-grid,
+.pdf-mode .insights-container {
+    display: block !important;
+}
+
+.pdf-mode .synthesis-card,
+.pdf-mode .domain-summary-card,
+.pdf-mode .insight-card,
+.pdf-mode .matrix-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-bottom: 25px !important;
+}
+
+@media print {
+    body, #app {
+        background: white !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+    }
+    #intro-view, #survey-form, header, button, [data-html2canvas-ignore="true"] {
+        display: none !important;
+    }
+    #results-view {
+        display: block !important;
+    }
+    .synthesis-card,
+    .domain-summary-card,
+    .insight-card,
+    .matrix-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 20px !important;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+    }
+    h2.section-title {
+        page-break-before: auto !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+    }
 }

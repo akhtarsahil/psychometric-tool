@@ -579,7 +579,20 @@ const surveyStructure = {
         "text": "Please select 'Agree' for this item.",
         "type": "control",
         "target": 4
-    }
+    },
+    { text: "It is sometimes hard for me to go on with my work if I am not encouraged.", domain: "validity", reverse: true },
+    { text: "I sometimes feel resentful when I don't get my way.", domain: "validity", reverse: true },
+    { text: "On a few occasions, I have given up doing something because I thought too little of my ability.", domain: "validity", reverse: true },
+    { text: "There have been times when I felt like rebelling against people in authority even though I knew they were right.", domain: "validity", reverse: true },
+    { text: "No matter who I'm talking to, I'm always a good listener.", domain: "validity", reverse: false },
+    { text: "There have been occasions when I took advantage of someone.", domain: "validity", reverse: true },
+    { text: "I'm always willing to admit it when I make a mistake.", domain: "validity", reverse: false },
+    { text: "I sometimes try to get even rather than forgive and forget.", domain: "validity", reverse: true },
+    { text: "I am always courteous, even to people who are disagreeable.", domain: "validity", reverse: false },
+    { text: "I have never been irked when people expressed ideas very different from my own.", domain: "validity", reverse: false },
+    { text: "There have been times when I was quite jealous of the good fortune of others.", domain: "validity", reverse: true },
+    { text: "I am sometimes irritated by people who ask favors of me.", domain: "validity", reverse: true },
+    { text: "I have never deliberately said something that hurt someone's feelings.", domain: "validity", reverse: false }
 ]
 };
 
@@ -836,164 +849,415 @@ const resultsData = {
     ],
     "layer_1_single_dimensions": {
         "neuroticism": {
-            "high": {
-                "insight": "High Volatility & Withdrawal. You likely experience emotions with greater intensity and duration than average. You may be more vigilant regarding potential risks or negative outcomes.",
-                "key_strength": "Risk Identification. You are often the first to notice inconsistencies, potential failures, or subtle changes in an environment.",
-                "potential_challenge": "Stress Management. Ambiguous situations or lack of feedback may trigger disproportionate anxiety or defensiveness.",
-                "developmental_focus": "Delayed Response Strategy. When receiving negative feedback, implement a mandatory waiting period before responding to allow emotional reactivity to subside.",
-                "environmental_preference": "Structured environments with clear performance metrics and minimal ambiguity."
+            "very_low": {
+                "insight_professional": "You exhibit extreme emotional detachment under pressure, remaining highly operational and objective during workplace crises.",
+                "insight_social_personal": "In relationships, you are a grounding force. However, you may fail to mirror a partner's emotional urgency, which can be perceived as coldness or invalidation during conflicts.",
+                "everyday_operational_habits": "Your baseline is steady. You do not require rigid routines to manage anxiety, allowing you to live comfortably in chaotic or unpredictable environments.",
+                "key_strength": "Absolute cognitive stability and stoicism across all domains of life.",
+                "potential_challenge": "Creating emotional distance by treating personal distress as a logistical problem to be solved rather than a feeling to be validated.",
+                "environmental_preference": "High-stakes environments and dynamic social circles where stoicism is an asset.",
+                "actionable_insights": [
+                    "When a partner is distressed, explicitly remind yourself that their emotional state is the primary operational issue; solving the logistical problem will not resolve the emotional one.",
+                    "Schedule intentional check-ins to monitor team or family morale, as you will not naturally detect rising ambient stress."
+                ]
             },
-            "low": {
-                "insight": "Low Volatility & Withdrawal. You tend to remain emotionally stable and resilient across changing circumstances. You are generally slow to anger or panic.",
-                "key_strength": "Stability under Pressure. You can maintain cognitive function and decision-making capabilities during crises.",
-                "potential_challenge": "Perceived Detachment. Your lack of visible emotional reaction may be misinterpreted by others as indifference or lack of urgency.",
-                "developmental_focus": "Active Empathy. Consciously verbally acknowledge the stress or emotions of others, even if you do not personally share those feelings.",
-                "environmental_preference": "High-intensity or high-stakes environments where emotional detachment is an asset."
+            "moderate_low": {
+                "insight_professional": "You are resilient and calm, acting as a stabilizing influence in high-pressure professional environments without becoming emotionally detached.",
+                "insight_social_personal": "You handle relationship friction well without becoming defensive or reactive. You provide steady, consistent emotional support to loved ones.",
+                "everyday_operational_habits": "You recover quickly from daily setbacks and do not dwell on minor frustrations or disruptions to your schedule.",
+                "key_strength": "Maintaining perspective and operational steadiness when others are overwhelmed.",
+                "potential_challenge": "Occasionally underestimating the genuine emotional weight of situations experienced by more sensitive peers or partners.",
+                "environmental_preference": "Fast-paced, high-accountability environments where stress tolerance is valued.",
+                "actionable_insights": [
+                    "Avoid using phrases like 'it's not a big deal' when others express anxiety; remember that their baseline sensitivity differs from yours.",
+                    "Leverage your composure during crises by volunteering to lead post-mortem discussions or high-tension negotiations."
+                ]
+            },
+            "balanced": {
+                "insight_professional": "You experience normal emotional responsiveness to stress and deadlines, using tension constructively to drive focus without becoming overwhelmed.",
+                "insight_social_personal": "You are emotionally relatable and empathetic, able to share vulnerability with partners while maintaining healthy boundaries.",
+                "everyday_operational_habits": "Your daily habits are flexible; you feel normal levels of urgency around deadlines but decompress effectively when work is done.",
+                "key_strength": "Healthy adaptability—experiencing enough stress to stay alert, but possessing enough resilience to recover swiftly.",
+                "potential_challenge": "Prolonged exposure to chaotic, high-conflict environments can gradually erode your baseline stability over time.",
+                "environmental_preference": "Balanced professional and social settings that challenge you without demanding constant firefighting.",
+                "actionable_insights": [
+                    "Monitor your stress load during major life transitions; your balanced nature can mask gradual burnout until a breaking point occurs.",
+                    "Establish clear separation between professional demands and personal relaxation time to preserve your emotional equilibrium."
+                ]
+            },
+            "moderate_high": {
+                "insight_professional": "You are highly vigilant and detail-oriented, driven by an acute awareness of potential risks and bottlenecks in projects.",
+                "insight_social_personal": "You care deeply about your relationships and are attuned to subtle shifts in tone or mood, though you may occasionally overanalyze minor conflicts.",
+                "everyday_operational_habits": "You rely on structure, preparation, and contingency planning to mitigate anxiety and maintain daily control.",
+                "key_strength": "Exceptional risk detection, anticipation of failure modes, and proactive preparation.",
+                "potential_challenge": "Experiencing unnecessary emotional fatigue by treating hypothetical worst-case scenarios as probable outcomes.",
+                "environmental_preference": "Structured, supportive, and highly organized environments where expectations and processes are explicit.",
+                "actionable_insights": [
+                    "Implement a 'worry budget': Allocate 15 minutes a day to write down all project or personal anxieties, then strictly forbid dwelling on them outside that window.",
+                    "When anticipating a negative outcome, force yourself to write down the best-case scenario and the most realistic scenario alongside the worst-case."
+                ]
+            },
+            "very_high": {
+                "insight_professional": "You operate with intense emotional attunement and threat-sensitivity, which can lead to severe stress under ambiguity or high-stakes pressure.",
+                "insight_social_personal": "You experience relationship dynamics deeply and passionately, but you are vulnerable to chronic worry, reassurance-seeking, and emotional exhaustion.",
+                "everyday_operational_habits": "Your daily routines are carefully constructed to minimize surprise and stress; unexpected disruptions can significantly derail your focus.",
+                "key_strength": "Profound empathy, deep emotional nuance, and unparalleled ability to spot subtle environmental hazards.",
+                "potential_challenge": "Severe vulnerability to anxiety, emotional flooding, and burnout when navigating sustained uncertainty or interpersonal conflict.",
+                "environmental_preference": "Highly stable, psychologically psychological-safe environments with clear structure and minimal interpersonal friction.",
+                "actionable_insights": [
+                    "Develop and practice somatic grounding techniques (e.g., physiological sighs, cold water immersion) to interrupt acute stress cycles before addressing problems verbally.",
+                    "Strictly limit your exposure to ambiguous communication channels outside working hours to protect your baseline recovery."
+                ]
             }
         },
         "conscientiousness": {
-            "high": {
-                "insight": "High Industriousness & Orderliness. You exhibit a strong preference for planning, organization, and goal completion. You are self-disciplined and reliable.",
-                "key_strength": "Execution and Reliability. You consistently meet deadlines and maintain high standards of quality control.",
-                "potential_challenge": "Rigidity. You may struggle to adapt when plans change suddenly or when efficiency requires sacrificing perfection.",
-                "developmental_focus": "Diminishing Returns Analysis. Practice identifying the point where additional effort yields negligible results, and move to the next task.",
-                "environmental_preference": "Roles offering autonomy over process and clear long-term objectives."
+            "very_low": {
+                "insight_professional": "You thrive on pure spontaneity and immediate execution, rejecting strict processes, deadlines, and administrative structure.",
+                "insight_social_personal": "You are spontaneous and fun-loving, but may frustrate partners through chronic disorganization, missed appointments, or lack of long-term planning.",
+                "everyday_operational_habits": "Your schedule is entirely fluid. You address tasks spontaneously as they catch your attention rather than working from structured lists.",
+                "key_strength": "Extreme adaptability and freedom from rigid routines, allowing instant pivots when circumstances change.",
+                "potential_challenge": "Severe difficulty with long-term follow-through, administrative maintenance, and meeting formal deadlines without external structure.",
+                "environmental_preference": "Dynamic, unstructured, or creative environments where rigid compliance is unnecessary and improvisation is rewarded.",
+                "actionable_insights": [
+                    "Implement the '2-Minute Rule': If a household or work task takes less than two minutes, do it immediately. Do not schedule it; you will forget.",
+                    "Use automated systems (auto-pay, recurring calendar alerts) for all essential life maintenance to bypass the need for personal discipline."
+                ]
             },
-            "low": {
-                "insight": "Low Industriousness & Orderliness. You prefer spontaneity and flexibility over rigid structures. You are often comfortable with disorder and improvisation.",
-                "key_strength": "Adaptability. You can pivot quickly in dynamic situations and are rarely paralyzed by a change in plans.",
-                "potential_challenge": "Administrative Consistency. You may overlook routine maintenance tasks, deadlines, or organizational details.",
-                "developmental_focus": "Immediate Action Heuristic. For administrative tasks taking less than two minutes, execute them immediately rather than scheduling them.",
-                "environmental_preference": "Dynamic environments with short-term horizons and external accountability structures."
+            "moderate_low": {
+                "insight_professional": "You prioritize flexibility over rigid planning. You execute effectively but find administrative maintenance tedious.",
+                "insight_social_personal": "You are a laid-back partner and friend. You prefer to 'go with the flow' rather than adhere to strict itineraries for social events or vacations.",
+                "everyday_operational_habits": "Your living space and daily schedule are functional but lived-in. You clean and organize only when the disorder begins to actively impede your life.",
+                "key_strength": "Adapting rapidly to changing circumstances without experiencing distress over broken plans.",
+                "potential_challenge": "Overlooking minor details or requiring external pressure to finalize the last 10% of a project or personal goal.",
+                "environmental_preference": "Fast-paced environments that value speed and adaptability over perfection.",
+                "actionable_insights": [
+                    "Use external accountability (body doubling, deadlines shared with peers) to force completion of tedious life tasks.",
+                    "Standardize just one key routine (e.g., a strict 15-minute evening reset for your home) to anchor your day."
+                ]
+            },
+            "balanced": {
+                "insight_professional": "You maintain functional organization, planning when necessary but willing to let minor details slide to maintain overall momentum.",
+                "insight_social_personal": "You contribute fairly to household management and relationship planning, balancing spontaneous fun with necessary responsibilities.",
+                "everyday_operational_habits": "You keep a reasonably organized life. You have systems, but you don't panic if a system temporarily breaks down during a busy week.",
+                "key_strength": "Balancing the need for structural planning with the reality of pragmatic execution.",
+                "potential_challenge": "Under extreme stress, your organizational systems are usually the first thing you abandon, leading to a backlog.",
+                "environmental_preference": "Environments offering a mix of structured deliverables and independent pacing.",
+                "actionable_insights": [
+                    "Identify which 'balls are glass' and which 'balls are rubber' in your daily life, and consciously let the rubber ones drop when overwhelmed.",
+                    "Set a weekly 'admin hour' to clear out personal and professional logistical backlog."
+                ]
+            },
+            "moderate_high": {
+                "insight_professional": "You drive execution through clear systems and consistent output, though you feel friction when forced to abandon a plan.",
+                "insight_social_personal": "You often take on the role of the 'planner' in your relationships. You show care through acts of service and reliable logistical support.",
+                "everyday_operational_habits": "Your home and schedule are highly structured. Clutter and disorganization cause you low-level psychological distress.",
+                "key_strength": "Consistently meeting commitments and maintaining high standards of quality in all domains.",
+                "potential_challenge": "Becoming overly critical of partners or friends who do not share your standard of order or punctuality.",
+                "environmental_preference": "Roles and living situations offering autonomy over process and clear, measurable objectives.",
+                "actionable_insights": [
+                    "Practice identifying the point of 'diminishing returns' in your organization; recognize when a task is 'good enough' to move on.",
+                    "Verbally separate your need for order from your partner's character (a messy room is just a messy room, not a sign of disrespect)."
+                ]
+            },
+            "very_high": {
+                "insight_professional": "You demand absolute precision. Your rigid perfectionism ensures flawless execution but makes you highly resistant to sudden systemic changes.",
+                "insight_social_personal": "You hold yourself and your loved ones to incredibly high, sometimes impossible, standards. You may inadvertently micromanage your household or partner.",
+                "everyday_operational_habits": "Your routines are ironclad. You rely on immaculate environments and strict schedules; deviation from the routine causes severe distress.",
+                "key_strength": "Maintaining highly complex, zero-error systems over long durations.",
+                "potential_challenge": "Analysis paralysis and alienating loved ones by treating personal relationships as projects to be optimized.",
+                "environmental_preference": "Highly regulated environments where precision, compliance, and absolute accuracy are required.",
+                "actionable_insights": [
+                    "Schedule mandatory 'unstructured time' where the explicit goal is to accomplish nothing and practice tolerating the discomfort of disorder.",
+                    "Force yourself to submit 'V1' drafts—or invite friends into a slightly messy house—to desensitize your perfectionism."
+                ]
             }
         },
         "agreeableness": {
-            "high": {
-                "insight": "High Compassion & Politeness. You place a high value on interpersonal harmony, cooperation, and the well-being of others.",
-                "key_strength": "Team Cohesion. You naturally facilitate collaboration and mitigate interpersonal conflict within groups.",
-                "potential_challenge": "Assertiveness. You may suppress your own needs or valid criticisms to avoid causing discomfort to others.",
-                "developmental_focus": "Boundary Setting. Practice declining minor requests regularly to normalize the prioritization of your own workload.",
-                "environmental_preference": "Collaborative, non-competitive cultures that emphasize shared success."
+            "very_low": {
+                "insight_professional": "You are highly antagonistic and strictly objective, prioritizing blunt truth and competitive advantage over team cohesion.",
+                "insight_social_personal": "Your relationships are often built on debate, shared activities, or utility rather than emotional vulnerability. You are fiercely independent and unbothered by social disapproval.",
+                "everyday_operational_habits": "You optimize for efficiency and self-interest. You do not waste time on social pleasantries or obligations you deem illogical.",
+                "key_strength": "Completely unhindered by social pressure; capable of making ruthless, necessary decisions.",
+                "potential_challenge": "Your directness is often perceived as aggressive hostility, severely limiting deep interpersonal intimacy and professional alliances.",
+                "environmental_preference": "Hyper-competitive, meritocratic environments where debate is the default state.",
+                "actionable_insights": [
+                    "Before delivering a critique, internally identify the strongest point the other person has made to ensure your pushback is objective rather than purely combative.",
+                    "Audit your relationships: Ensure you have at least one dynamic that is entirely based on mutual care rather than utility or debate."
+                ]
             },
-            "low": {
-                "insight": "Low Compassion & Politeness. You prioritize objective truth, utility, and competition over social niceties. You are generally skeptical and direct.",
-                "key_strength": "Objective Analysis. You are willing to voice unpopular facts or make difficult decisions without being hindered by emotional concerns.",
-                "potential_challenge": "Interpersonal Friction. Your directness may be perceived as hostility, potentially damaging professional relationships.",
-                "developmental_focus": "Tactical Validation. Before offering a critique, acknowledge a valid point in the opposing argument to lower defensiveness.",
-                "environmental_preference": "Meritocratic or competitive environments where debate and directness are normalized."
+            "moderate_low": {
+                "insight_professional": "You are skeptical and direct. You value utility over social harmony, acting as an effective critical thinker who challenges group consensus.",
+                "insight_social_personal": "You are fiercely loyal to a small inner circle but maintain a guarded, analytical approach to new people. You show love by solving problems, not through excessive warmth.",
+                "everyday_operational_habits": "You protect your time and resources well, easily saying 'no' to social requests or obligations that drain you.",
+                "key_strength": "Filtering out groupthink and ensuring decisions are based on data rather than social comfort.",
+                "potential_challenge": "Unnecessarily escalating minor disagreements by focusing entirely on technical truth rather than the emotional context.",
+                "environmental_preference": "Results-oriented cultures that normalize direct, unvarnished feedback.",
+                "actionable_insights": [
+                    "Ask yourself if winning a minor argument with a loved one is worth the relational capital it will cost.",
+                    "When someone comes to you with a problem, default to asking, 'Do you want comfort or solutions?' before deploying your analytical skills."
+                ]
+            },
+            "balanced": {
+                "insight_professional": "You navigate social dynamics pragmatically, cooperating easily but maintaining clear boundaries for healthy pushback.",
+                "insight_social_personal": "You are generally warm and supportive, but you do not sacrifice your core needs to keep the peace. You can handle conflict when it arises.",
+                "everyday_operational_habits": "You engage in community and social obligations willingly, but withdraw to protect your own energy when necessary.",
+                "key_strength": "Building consensus without becoming a pushover; maintaining balanced reciprocity.",
+                "potential_challenge": "Occasionally sending mixed signals by switching rapidly between warmth and strict objectivity.",
+                "environmental_preference": "Environments that value teamwork but respect individual boundaries.",
+                "actionable_insights": [
+                    "Clearly signal your mode to others: 'I'm putting on my critical thinking hat for a second,' to soften the transition to objectivity.",
+                    "Regularly audit your close relationships to ensure the give-and-take remains equitable."
+                ]
+            },
+            "moderate_high": {
+                "insight_professional": "You are highly collaborative, prioritizing team morale and naturally facilitating smooth operations, though you hesitate to deliver harsh feedback.",
+                "insight_social_personal": "You are deeply empathetic and heavily prioritize the needs of your family and friends, often acting as the emotional glue of your social circle.",
+                "everyday_operational_habits": "Your day is heavily influenced by the needs of others. You are likely to derail your own plans to help someone else.",
+                "key_strength": "Actively mitigating friction and building highly loyal, deeply connected relationships.",
+                "potential_challenge": "Suppressing your own valid grievances or accepting subpar treatment to avoid the discomfort of confrontation.",
+                "environmental_preference": "Mission-driven, communal cultures that emphasize shared human success.",
+                "actionable_insights": [
+                    "Reframe boundary-setting: Saying 'no' to an unreasonable request is actually a protective measure for your long-term relationship with that person.",
+                    "Practice delivering 'micro-corrections' (small pieces of critical feedback) daily to build your tolerance for interpersonal friction."
+                ]
+            },
+            "very_high": {
+                "insight_professional": "You are extremely accommodating and conflict-averse, prioritizing the emotional comfort of others to the extent that you suppress your own needs.",
+                "insight_social_personal": "You are a chronic people-pleaser. You likely attract dominant personalities and struggle deeply to express anger or assert boundaries in your romantic life.",
+                "everyday_operational_habits": "Your lifestyle is entirely dictated by external obligations. You absorb the emotional weight of your household, leading to chronic exhaustion.",
+                "key_strength": "Immense empathy, selflessness, and profound attunement to the emotional needs of others.",
+                "potential_challenge": "Severe risk of burnout, resentment, and being actively leveraged by highly competitive or narcissistic peers.",
+                "environmental_preference": "Highly supportive, non-competitive environments rooted in caregiving or service.",
+                "actionable_insights": [
+                    "Establish a default delay for all requests: Respond to every favor with, 'Let me check my schedule and get back to you.' Never say yes immediately.",
+                    "Schedule weekly 'selfish time' where you are explicitly forbidden from doing anything that benefits another person."
+                ]
             }
         },
         "extraversion": {
-            "high": {
-                "insight": "High Enthusiasm & Assertiveness. You are energized by social interaction and external stimulation. You tend to be verbal, dominant, and expressive.",
-                "key_strength": "Social Initiation. You are effective at networking, public speaking, and establishing a presence in group settings.",
-                "potential_challenge": "Listening Skills. You may dominate conversations or speak before fully processing the input of others.",
-                "developmental_focus": "Active Pausing. In meetings, deliberately wait for a few seconds after a speaker finishes before interjecting.",
-                "environmental_preference": "Roles requiring frequent interaction, public visibility, and variety."
+            "very_low": {
+                "insight_professional": "You find social stimulation and group settings draining, exerting influence strictly through the high quality of your independent output.",
+                "insight_social_personal": "You are fiercely protective of your solitude and social battery. You prefer deep, one-on-one connections and find large gatherings exhausting.",
+                "everyday_operational_habits": "Your ideal routine involves long stretches of uninterrupted, quiet focus. You actively minimize spontaneous social interactions.",
+                "key_strength": "Massive capacity for deep, sustained focus and independent problem-solving in total isolation.",
+                "potential_challenge": "Risk of becoming invisible within organizations or social groups, allowing others to overlook your contributions or needs.",
+                "environmental_preference": "Quiet, isolated environments that strictly protect uninterrupted focus.",
+                "actionable_insights": [
+                    "Implement asynchronous visibility: Send weekly written summaries of your accomplishments to leadership so you don't have to vocalize them in meetings.",
+                    "Establish a hard 'social budget' for your personal life, communicating clearly to friends when you have reached your limit for the week."
+                ]
             },
-            "low": {
-                "insight": "Low Enthusiasm & Assertiveness. You find high levels of social stimulation draining and prefer solitary or low-key activities. You are reserved and reflective.",
-                "key_strength": "Sustained Focus. You are capable of deep, independent work without requiring constant social validation.",
-                "potential_challenge": "Visibility. Your contributions may go unrecognized if you rely solely on the quality of work rather than self-promotion.",
-                "developmental_focus": "Strategic Communication. Implement a routine of brief, written status updates to ensure your work is visible to stakeholders.",
-                "environmental_preference": "Quiet environments allowing for long periods of uninterrupted work."
+            "moderate_low": {
+                "insight_professional": "You are reserved and deliberate, preferring solitary deep work and small functional teams over high-visibility leadership.",
+                "insight_social_personal": "You are a thoughtful, highly present listener. You prefer intentional gatherings over spontaneous parties and take time to open up to new people.",
+                "everyday_operational_habits": "You structure your day around quiet productivity, using breaks for solitary recharge rather than socializing.",
+                "key_strength": "Active listening and processing information fully before committing to a verbal position.",
+                "potential_challenge": "Failing to advocate for your own ideas in fast-paced environments where aggressive interruptions are standard.",
+                "environmental_preference": "Roles combining high autonomy with small, trusted, and familiar teams.",
+                "actionable_insights": [
+                    "Prepare one data-backed talking point before every meeting and force yourself to deliver it early, establishing your presence.",
+                    "Practice saying, 'I need some time to process that; I'll email you my thoughts by noon,' to avoid being put on the spot verbally."
+                ]
+            },
+            "balanced": {
+                "insight_professional": "You are socially adaptable, capable of leading meetings or engaging in team settings while relying on independent focus to recharge.",
+                "insight_social_personal": "You enjoy socializing and attending events, but you happily retreat to your own space when your social battery winds down.",
+                "everyday_operational_habits": "You naturally alternate between collaborative bursts and solitary focus, adapting your routine to the demands of the week.",
+                "key_strength": "Bridging the communication gap between highly introverted technical experts and highly verbal extroverts.",
+                "potential_challenge": "Spreading yourself too thin by trying to match the energy of high extraverts while also maintaining the deep work habits of introverts.",
+                "environmental_preference": "Hybrid environments offering both communal collaboration spaces and quiet, closed-door focus areas.",
+                "actionable_insights": [
+                    "Block out mandatory 'no-meeting' mornings on your calendar to protect your deep work from being eroded by social demands.",
+                    "Pay attention to whether you feel energized or drained after social interactions to better predict your recharge needs."
+                ]
+            },
+            "moderate_high": {
+                "insight_professional": "You are engaging and assertive, thriving in public-facing roles and utilizing verbal communication to build project momentum.",
+                "insight_social_personal": "You are warm, outgoing, and easily initiate connections. You naturally take the lead in organizing social outings and bringing people together.",
+                "everyday_operational_habits": "You seek out stimulation and external interaction throughout the day, often thinking out loud to process ideas.",
+                "key_strength": "Networking, initiating action, and generating external enthusiasm across diverse groups.",
+                "potential_challenge": "Formulating thoughts while speaking, which can lead to premature commitments or inadvertently dominating conversation.",
+                "environmental_preference": "Roles requiring frequent interaction, external negotiation, and high visibility.",
+                "actionable_insights": [
+                    "Practice 'Active Pausing': Wait three full seconds after a colleague or partner finishes speaking before you begin responding.",
+                    "Write down your initial ideas before voicing them in meetings to ensure you aren't just thinking aloud at the expense of others' airtime."
+                ]
+            },
+            "very_high": {
+                "insight_professional": "You require constant external stimulation and dominance, aggressively seeking visibility, leadership, and action above solitary analysis.",
+                "insight_social_personal": "You are the center of gravity in your social circles. You crave excitement, large gatherings, and verbal exchange, but may overwhelm quieter partners.",
+                "everyday_operational_habits": "You operate at a high verbal and physical tempo, filling quiet spaces with activity, conversation, and immediate action.",
+                "key_strength": "Unyielding drive to initiate momentum, command room attention, and forcefully push objectives forward.",
+                "potential_challenge": "Steamrolling detailed planning, dismissing quiet experts, and exhausting peers with constant social urgency.",
+                "environmental_preference": "High-stimulus environments like enterprise leadership, public relations, or high-stakes negotiations.",
+                "actionable_insights": [
+                    "Enforce a strict rule to speak last in strategic meetings; compel your team to outline their positions fully before establishing yours.",
+                    "Consciously practice sitting in silence during conversations, resisting the urge to fill every conversational pause with your own voice."
+                ]
             }
         },
         "openness": {
-            "high": {
-                "insight": "High Intellect & Openness. You are motivated by novelty, abstract ideas, and aesthetic experiences. You tend to be creative and curious.",
-                "key_strength": "Strategic Innovation. You excel at connecting unrelated concepts and visualizing future possibilities.",
-                "potential_challenge": "Routine Maintenance. Repetitive or purely administrative tasks may lead to significant disengagement or procrastination.",
-                "developmental_focus": "Prioritization. Limit your focus to one primary creative project at a time to prevent fragmented attention.",
-                "environmental_preference": "Roles involved in R&D, strategy, or creative production."
+            "very_low": {
+                "insight_professional": "You are strictly traditional and pragmatic, rejecting theoretical frameworks in favor of proven, concrete methodologies.",
+                "insight_social_personal": "You prefer familiar routines, classic traditions, and practical conversations over abstract philosophical debates or unconventional art.",
+                "everyday_operational_habits": "Your routines are consistent and grounded in what works. You do not change tools, brands, or habits unless forced by obsolescence.",
+                "key_strength": "Ensuring operational continuity and preventing teams from adopting untested, speculative, or highly flawed systems.",
+                "potential_challenge": "Aggressively defending legacy systems or personal habits long after they have become inefficient or obsolete.",
+                "environmental_preference": "Highly established institutions with clear hierarchies and unchanging core processes.",
+                "actionable_insights": [
+                    "Evaluate new tools strictly on their demonstrable ROI and time-saving metrics rather than focusing on the discomfort of the initial learning curve.",
+                    "When loved ones want to try a radical new experience (restaurant, travel style), agree to participate without immediately pointing out practical flaws."
+                ]
             },
-            "low": {
-                "insight": "Low Intellect & Openness. You value pragmatism, tradition, and concrete reality. You prefer proven methods over theoretical speculation.",
-                "key_strength": "Practical Implementation. You are effective at maintaining systems, following procedures, and dealing with tangible facts.",
-                "potential_challenge": "Change Resistance. You may be skeptical of new methods or technologies that lack immediate, proven utility.",
-                "developmental_focus": "Novelty Exposure. Periodically engage with a new tool or methodology to maintain adaptability.",
-                "environmental_preference": "Roles with clear procedures, defined hierarchies, and practical outcomes."
+            "moderate_low": {
+                "insight_professional": "You are grounded and realistic, adopting new tools or ideas only when they offer immediate, demonstrable utility.",
+                "insight_social_personal": "You are down-to-earth and straightforward. You enjoy tangible, real-world activities (crafts, sports, concrete problem-solving) over abstract speculation.",
+                "everyday_operational_habits": "You maintain a practical daily flow, focusing your energy on getting concrete tasks done rather than pondering hypothetical scenarios.",
+                "key_strength": "Executing established plans efficiently without getting distracted by novel, unproven concepts.",
+                "potential_challenge": "Dismissing unconventional or creative solutions simply because they lack immediate precedent or conventional structure.",
+                "environmental_preference": "Roles emphasizing practical execution, manufacturing, logistics, or administrative stability.",
+                "actionable_insights": [
+                    "When presented with a novel strategy, explicitly map out how it could practically integrate with your workflow before rejecting it.",
+                    "Differentiate between an idea being 'unrealistic' versus simply being 'unfamiliar' to you."
+                ]
+            },
+            "balanced": {
+                "insight_professional": "You balance pragmatism with curiosity, open to novel solutions while maintaining a strict requirement that new ideas be anchored to reality.",
+                "insight_social_personal": "You appreciate art, culture, and novel ideas in moderation, but you remain equally comfortable with traditional, grounded routines.",
+                "everyday_operational_habits": "You are willing to tweak and optimize your daily habits when a better method appears, but you don't change routines just for the sake of novelty.",
+                "key_strength": "Acting as a vital translator between highly abstract creatives and strictly literal operators.",
+                "potential_challenge": "Hesitating to fully commit to either radical innovation or complete standardization when forced to choose an extreme.",
+                "environmental_preference": "Roles that require optimizing and evolving existing systems rather than inventing entirely new paradigms.",
+                "actionable_insights": [
+                    "Dedicate specific time blocks to explore unproven concepts, knowing you possess the grounding to discard them if they lack utility.",
+                    "Use your balanced perspective to mediate debates between the innovators and the traditionalists on your team."
+                ]
+            },
+            "moderate_high": {
+                "insight_professional": "You are strategic and creative, naturally synthesizing complex abstract concepts to drive innovation and novel problem-solving.",
+                "insight_social_personal": "You are intellectually curious and aesthetically sensitive. You enjoy deep, abstract conversations and seek out diverse, unconventional experiences.",
+                "everyday_operational_habits": "You easily bore of repetitive daily routines, continuously finding new ways to organize, work, or explore new intellectual territory.",
+                "key_strength": "Anticipating future trends and connecting disparate concepts to form cohesive, innovative strategies.",
+                "potential_challenge": "Losing motivation during the long-term maintenance phase of a project once the initial conceptual puzzle is solved.",
+                "environmental_preference": "Environments focused on R&D, product development, design, or long-term strategic planning.",
+                "actionable_insights": [
+                    "Partner with highly conscientious executors to ensure your creative strategies survive the transition from concept to long-term reality.",
+                    "Create a 'parking lot' for new ideas so you can capture creative bursts without abandoning your current commitments."
+                ]
+            },
+            "very_high": {
+                "insight_professional": "You are relentlessly theoretical and novelty-seeking, generating continuous paradigm-shifting ideas while actively despising routine maintenance.",
+                "insight_social_personal": "You live in the world of ideas, art, and possibilities. You require partners and friends who can match your intense intellectual curiosity and appetite for novelty.",
+                "everyday_operational_habits": "Your daily habits are fluid and experimental. You constantly change workflows, explore rabbit holes, and resist conventional lifestyle structures.",
+                "key_strength": "Immense intellectual bandwidth and the capability to conceptualize entirely new frameworks and artistic breakthroughs.",
+                "potential_challenge": "Becoming a perpetual architect who never builds the house, abandoning practical follow-through the moment the conceptual challenge is resolved.",
+                "environmental_preference": "Purely creative, academic, or entrepreneurial environments demanding continuous ideation without maintenance burdens.",
+                "actionable_insights": [
+                    "Limit yourself to one primary conceptual project at a time; forbid yourself from starting a new initiative until the current one is officially handed off.",
+                    "Establish strict operational boundaries or hire administrative support so your unconventional habits do not disrupt practical life necessities."
+                ]
             }
         }
     },
-    "layer_2_intersections": {
-        "work_style": {
-            "E_high_C_high": {
-                "profile_name": "Structured Leader",
-                "detailed_analysis": "This combination suggests a drive for leadership coupled with the discipline to execute. You likely exhibit high energy in directing others and high standards for the final output.",
-                "blindspot_warning": "May inhibit team autonomy by over-directing. Subordinates may hesitate to voice concerns due to your dominant style.",
-                "growth_challenge": "Solicit specific feedback on your management style from subordinates, focusing on areas where you may be overly controlling."
+            "layer_2_intersections": {
+            "work_and_execution_style": {
+                "E_high_C_high": {
+                    "profile_name": "The Structured Director",
+                    "detailed_analysis": "You exhibit high energy in directing others coupled with the discipline to execute. Professionally, you are a dominant leader who demands high standards. Personally, you likely run your household like a business, organizing group trips, managing the social calendar, and ensuring everyone meets their commitments.",
+                    "social_dynamic": "You are the undisputed leader of your friend group, but your intensity can leave less driven friends feeling managed rather than loved.",
+                    "blindspot_warning": "May inhibit team and partner autonomy by over-directing. Loved ones may hesitate to voice concerns due to your forceful, controlling style.",
+                    "actionable_insights": [
+                        "Solicit specific feedback on your management style from subordinates and your partner, specifically asking where you might be overly controlling.",
+                        "Let someone else plan the next social outing, and commit to following their plan without offering 'optimizations'."
+                    ]
+                },
+                "E_high_C_low": {
+                    "profile_name": "The Dynamic Initiator",
+                    "detailed_analysis": "You excel at starting projects, rallying support, and generating excitement. However, your high energy is not backed by detailed follow-through. You are the life of the party and a visionary starter, but you often leave a trail of unfinished personal projects and administrative messes for others to clean up.",
+                    "social_dynamic": "You bring massive fun and spontaneity to relationships, but you may frustrate partners with your unreliability regarding chores or logistics.",
+                    "blindspot_warning": "Tendency to over-commit resources, make grand promises, or agree to social events without verifying logistical feasibility.",
+                    "actionable_insights": [
+                        "Avoid immediate verbal commitments. Adopt a standard practice of saying 'Let me check my calendar' before agreeing to any professional or social deadline.",
+                        "Pair up with highly conscientious peers or partners, and explicitly grant them the authority to rein in your impulses."
+                    ]
+                },
+                "E_low_C_high": {
+                    "profile_name": "The Independent Operator",
+                    "detailed_analysis": "You function as a reliable, independent contributor who focuses on technical precision over social influence. In your personal life, you are highly self-sufficient, maintaining an organized, quiet lifestyle where you handle your own responsibilities without needing an audience.",
+                    "social_dynamic": "You are a low-maintenance, deeply loyal friend, but you are difficult to get to know and rarely initiate social contact.",
+                    "blindspot_warning": "Your perfectionism and isolation can lead to extreme analysis paralysis. You may withhold affection or work until it meets an unnecessarily high standard.",
+                    "actionable_insights": [
+                        "Practice sharing early 'works in progress'—both in your professional drafts and by sharing your unpolished thoughts with close friends.",
+                        "Set a recurring calendar reminder to initiate contact with your core friends, overriding your natural instinct to wait for them to reach out."
+                    ]
+                },
+                "E_low_C_low": {
+                    "profile_name": "The Flexible Observer",
+                    "detailed_analysis": "You prefer roles and lifestyles that allow for independence and flexibility. You are not driven by rigid schedules or the need for social dominance. You take life as it comes, maintaining a low-stress, improvisational approach to both career and home management.",
+                    "social_dynamic": "You are incredibly easygoing and accepting of others, but your extreme passivity means partners may feel they have to drag you through life's milestones.",
+                    "blindspot_warning": "Risk of severe passivity and inertia. Without external structure or social pressure, you may struggle to self-initiate complex tasks or personal growth.",
+                    "actionable_insights": [
+                        "Establish external accountability structures (e.g., hiring a trainer, scheduling regular check-ins with a manager) to maintain momentum.",
+                        "Take proactive ownership of at least one major household or relationship responsibility to relieve the administrative burden on your partner."
+                    ]
+                },
+                "mixed_interaction_fallback": {
+                    "profile_name": "The Contextual Generalist",
+                    "detailed_analysis": "You possess a balanced behavioral profile, capable of shifting between leadership and support, or structure and spontaneity, based on what the environment demands.",
+                    "social_dynamic": "You adapt easily to different social circles, serving as a stabilizing presence that bridges the gap between extreme personalities.",
+                    "blindspot_warning": "Lack of distinct specialization. You may be viewed as competent in many areas but exceptional in none.",
+                    "actionable_insights": [
+                        "Proactively select a 'spike' skill—one area where you force yourself to be highly specialized—to differentiate yourself professionally.",
+                        "Ensure you aren't just adopting the traits of whoever you are currently spending time with; actively define your own boundaries."
+                    ]
+                }
             },
-            "E_high_C_low": {
-                "profile_name": "Dynamic Initiator",
-                "detailed_analysis": "You likely excel at starting projects, sales, and rallying support. Your energy is high, but your attention to detailed follow-through may be inconsistent.",
-                "blindspot_warning": "Tendency to over-commit resources or timelines without verifying logistical feasibility.",
-                "growth_challenge": "Avoid immediate verbal commitments. Adopt a standard practice of verifying schedules before agreeing to deadlines."
-            },
-            "E_low_C_high": {
-                "profile_name": "Operational Specialist",
-                "detailed_analysis": "You likely function as a reliable, independent contributor. You focus on technical precision and systems maintenance rather than social influence.",
-                "blindspot_warning": "Perfectionism may lead to delays (analysis paralysis). You may withhold partial work until it meets an unnecessarily high standard.",
-                "growth_challenge": "Practice sharing early drafts or 'work in progress' to gather feedback before investing time in perfecting the details."
-            },
-            "E_low_C_low": {
-                "profile_name": "Flexible Observer",
-                "detailed_analysis": "You likely prefer roles that allow for independence and flexibility. You are not driven by rigid schedules or the need for social dominance.",
-                "blindspot_warning": "Risk of passivity. Without external structure or pressure, you may struggle to self-initiate complex tasks.",
-                "growth_challenge": "Establish external accountability structures (e.g., regular check-ins) to maintain momentum on long-term goals."
-            },
-            "E_average_C_average": {
-                "profile_name": "The Generalist",
-                "detailed_analysis": "You possess a balanced profile, capable of shifting between leadership and support roles as required. You are neither rigidly structured nor chaotic.",
-                "blindspot_warning": "Lack of distinct specialization. You may be viewed as competent in many areas but exceptional in none.",
-                "growth_challenge": " proactively select a 'spike' skill—one area where you force yourself to be highly specialized—to differentiate yourself."
-            },
-            "E_high_C_average": {
-                "profile_name": "The Social Facilitator",
-                "detailed_analysis": "Your high social energy is moderated by average conscientiousness. You are effective at maintaining morale and communication without being overly rigid about rules.",
-                "blindspot_warning": "You may prioritize the 'vibe' of the team over the strict efficiency of the process.",
-                "growth_challenge": "Ensure that your meetings always end with written action items, not just good feelings."
-            },
-            "E_low_C_average": {
-                "profile_name": "The Independent Producer",
-                "detailed_analysis": "You prefer to work alone and have a moderate ability to self-manage. You are steady and low-maintenance.",
-                "blindspot_warning": "You risk becoming invisible. You do the work, but you don't advocate for it.",
-                "growth_challenge": "Force yourself to voice your opinion in meetings at least once, even if it feels unnecessary."
-            },
-            "E_average_C_high": {
-                "profile_name": "The Reliable Deputy",
-                "detailed_analysis": "You have high discipline but moderate social need. You are often the 'right hand' to a more volatile leader, providing stability and execution.",
-                "blindspot_warning": "You may rely too heavily on authority figures to set the direction for you.",
-                "growth_challenge": "Practice initiating a project proposal yourself rather than waiting to be assigned one."
-            },
-            "E_average_C_low": {
-                "profile_name": "The Responsive Support",
-                "detailed_analysis": "You are flexible and moderately social. You excel in support roles that require reacting to incoming requests rather than long-term planning.",
-                "blindspot_warning": "Reactive workflow. You may spend your whole career putting out fires rather than building things.",
-                "growth_challenge": "Block out one hour each morning for 'Deep Work' before you open your email or slack."
-            }
-        },
-        "conflict_style": {
-            "A_high_N_high": {
-                "profile_name": "Appeasing Style",
-                "conflict_tactic": "Tendency to concede or apologize quickly to resolve the immediate emotional tension of a conflict.",
-                "advice": "Recognize that professional disagreement is a necessary function of business, not a personal rejection."
-            },
-            "A_low_N_low": {
-                "profile_name": "Objective Style",
-                "conflict_tactic": "Tendency to focus strictly on facts and logic, often bypassing the emotional component of the dispute.",
-                "advice": "Acknowledge the other party's perspective verbally before presenting counter-arguments to prevent them from becoming defensive."
-            },
-            "A_average_N_average": {
-                "profile_name": "The Pragmatic Mediator",
-                "conflict_tactic": "You generally seek a middle ground and are not easily triggered, though you have limits.",
-                "advice": "Your balance is an asset. Use your neutrality to translate between the highly emotional and the highly logical team members."
-            },
-            "mixed_interaction_fallback": {
-                "profile_name": "Situational Responder",
-                "conflict_tactic": "Your response to conflict depends heavily on the specific context and your current stress level.",
-                "advice": "Since your default setting is flexible, pay close attention to the emotional state of the *other* person to decide your tactic."
+            "relationship_and_conflict_style": {
+                "A_high_N_high": {
+                    "profile_name": "The Anxious Appeaser",
+                    "conflict_tactic": "Tendency to concede, apologize quickly, or suppress your own needs to resolve the immediate emotional tension of a conflict, often driven by a fear of abandonment or failure.",
+                    "actionable_insights": [
+                        "Recognize that professional and personal disagreement is a necessary function of a healthy system, not a sign of impending rejection.",
+                        "Internally clarify your own non-negotiable needs before entering a difficult conversation, preventing you from automatically adopting the other person's priorities out of panic.",
+                        "Practice 'tolerating the pause' during arguments rather than rushing to concede just to end the silence."
+                    ]
+                },
+                "A_low_N_low": {
+                    "profile_name": "The Stoic Challenger",
+                    "conflict_tactic": "Tendency to focus strictly on facts, logic, and utility, completely bypassing the emotional component of the dispute and remaining unfazed by the other party's distress.",
+                    "actionable_insights": [
+                        "Understand that in romantic and social conflicts, the 'feeling' is often the actual problem. Fixing the logistics won't fix the feeling.",
+                        "Internally map the emotional context of a dispute before engaging. If you only argue the logistical facts, the conflict will remain unresolved.",
+                        "Monitor your tone; your natural stoicism can easily be misread as contempt or arrogance during heated moments."
+                    ]
+                },
+                "A_high_N_low": {
+                    "profile_name": "The Steady Harmonizer",
+                    "conflict_tactic": "You seek peaceful resolutions and consensus, maintaining a calm, unflappable demeanor even when the other party becomes highly emotional or erratic.",
+                    "actionable_insights": [
+                        "Your calmness is an asset, but be careful not to act 'above' the conflict, which can invalidate a highly distressed partner.",
+                        "Use your emotional stability to gently guide the conversation back to collaborative solutions rather than just absorbing the other person's anger.",
+                        "Ensure you aren't using your calm demeanor as a shield to avoid taking action on valid criticisms."
+                    ]
+                },
+                "A_low_N_high": {
+                    "profile_name": "The Volatile Critic",
+                    "conflict_tactic": "You are easily triggered by stress and have zero hesitation about expressing your displeasure bluntly. You are likely to engage in combative, highly critical arguments when threatened.",
+                    "actionable_insights": [
+                        "You must implement a strict 'time-out' protocol during arguments. When your heart rate spikes, step away for 20 minutes before continuing the discussion.",
+                        "Focus your critiques on the specific behavior ('You left the report unfinished') rather than attacking the person's character ('You are lazy').",
+                        "Recognize that your blunt delivery combined with high emotional intensity is incredibly destructive to team cohesion and marital trust."
+                    ]
+                },
+                "mixed_interaction_fallback": {
+                    "profile_name": "The Pragmatic Mediator",
+                    "conflict_tactic": "Your response to conflict depends heavily on the specific context. You generally seek a middle ground and are not easily triggered, though you have firm limits.",
+                    "actionable_insights": [
+                        "Your balance is your greatest asset. Use your neutrality to translate between highly emotional and highly logical team members or family members.",
+                        "Pay close attention to the emotional state of the *other* person to decide your tactic—whether they need logical solutions or emotional validation.",
+                        "Don't let your desire for a pragmatic middle ground prevent you from taking a hard stance when core principles are violated."
+                    ]
+                }
             }
         }
-    }
 };
