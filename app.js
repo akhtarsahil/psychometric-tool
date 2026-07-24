@@ -498,34 +498,66 @@ let normativeData = {
             const nStat = domainStats.find(d => d.name === "Neuroticism") || { pct: 50, level: 'balanced', displayName: 'Neuroticism' };
             const cStat = domainStats.find(d => d.name === "Conscientiousness") || { pct: 50, level: 'balanced', displayName: 'Conscientiousness' };
 
+            const transitionSummary = "The following metrics isolate the primary variables of your baseline behavior across daily operations, focusing on workflow management, risk assessment, and interpersonal alignment.";
+
             const driverDescriptions = {
-                "Conscientiousness": `Your entire profile is powered by an exceptional demand for structure (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>).`,
-                "Extraversion": `Your entire profile is powered by high social energy (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>).`,
-                "Neuroticism": `Your entire profile is governed by heightened emotional attunement (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>).`,
-                "Agreeableness": `Your entire profile is centered around interpersonal harmony (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>).`,
-                "Openness/Intellect": `Your entire profile is propelled by intellectual curiosity (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>).`,
-                "Openness": `Your entire profile is propelled by intellectual curiosity (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>).`
+                "Conscientiousness": `<strong>Structural management:</strong> Your baseline relies on strict scheduling and consistent task execution (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>). This operational driver prioritizes organizing household logistics, maintaining established standards, and eliminating unpredictability in daily planning.`,
+                "Extraversion": `<strong>Social engagement:</strong> Your baseline relies on external interaction and assertive communication (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>). This operational driver prioritizes directing social calendars, leading group initiatives, and maintaining high activity levels in professional and personal settings.`,
+                "Neuroticism": `<strong>Risk assessment:</strong> Your baseline relies on situational vigilance and threat detection (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>). This operational driver prioritizes monitoring environmental shifts, assessing interpersonal risks, and maintaining contingency plans across daily routines.`,
+                "Agreeableness": `<strong>Interpersonal alignment:</strong> Your baseline relies on collaborative consensus and conflict reduction (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>). This operational driver prioritizes maintaining cooperative relationships, mediating disputes, and ensuring group cohesion across workplace and domestic environments.`,
+                "Openness/Intellect": `<strong>Conceptual exploration:</strong> Your baseline relies on processing new information and analyzing complex systems (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>). This operational driver prioritizes testing unconventional methods, analyzing abstract concepts, and developing new problem-solving frameworks.`,
+                "Openness": `<strong>Conceptual exploration:</strong> Your baseline relies on processing new information and analyzing complex systems (<span class="synthesis-highlight">${primaryDriver.displayName}: ${this.getOrdinal(primaryDriver.pct)} percentile</span>). This operational driver prioritizes testing unconventional methods, analyzing abstract concepts, and developing new problem-solving frameworks.`
             };
 
             const constraintDescriptions = {
-                "Conscientiousness": `Conversely, your primary constraint lies in <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>.`,
-                "Extraversion": `Conversely, your primary constraint lies in <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>.`,
-                "Neuroticism": `Conversely, your primary constraint lies in <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>.`,
-                "Agreeableness": `Conversely, your primary constraint lies in <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>.`,
-                "Openness/Intellect": `Conversely, your primary constraint lies in <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>.`,
-                "Openness": `Conversely, your primary constraint lies in <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>.`
+                "Conscientiousness": `<strong>Operational flexibility:</strong> Your primary constraint is <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>. This results in a preference for improvised workflows over rigid schedules. Maintaining long-term administrative tasks requires implementing automated systems rather than relying on sustained manual effort.`,
+                "Extraversion": `<strong>Energy conservation:</strong> Your primary constraint is <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>. This results in a rapid depletion of energy during prolonged social exposure. Maintaining operational capacity requires scheduling isolated downtime and limiting consecutive group engagements.`,
+                "Neuroticism": `<strong>Emotional detachment:</strong> Your primary constraint is <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>. This results in high composure during crises but can read as disinterest to others. Maintaining relational trust requires deliberately mirroring others' emotional states rather than defaulting to purely logical problem-solving.`,
+                "Agreeableness": `<strong>Direct communication:</strong> Your primary constraint is <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>. This results in a communication style that prioritizes factual utility over social comfort. Maintaining functional partnerships requires auditing your delivery tone during sensitive discussions to prevent unnecessary friction.`,
+                "Openness/Intellect": `<strong>Practical execution:</strong> Your primary constraint is <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>. This results in a reliance on proven, concrete methodologies rather than experimental approaches. Maintaining adaptability requires actively testing new tools and workflows when existing routines become inefficient.`,
+                "Openness": `<strong>Practical execution:</strong> Your primary constraint is <span class="synthesis-highlight">${primaryConstraint.displayName} (${this.getOrdinal(primaryConstraint.pct)} percentile)</span>. This results in a reliance on proven, concrete methodologies rather than experimental approaches. Maintaining adaptability requires actively testing new tools and workflows when existing routines become inefficient.`
             };
 
-            const p1 = (driverDescriptions[primaryDriver.name] || driverDescriptions["Conscientiousness"]) + " " + (constraintDescriptions[primaryConstraint.name] || constraintDescriptions["Conscientiousness"]);
+            const p1 = `${transitionSummary}<br><br>` + (driverDescriptions[primaryDriver.name] || driverDescriptions["Conscientiousness"]) + "<br><br>" + (constraintDescriptions[primaryConstraint.name] || constraintDescriptions["Conscientiousness"]);
+
+            const nCat = (nStat.level === 'very_high' || nStat.level === 'moderate_high') ? 'high' : ((nStat.level === 'very_low' || nStat.level === 'moderate_low') ? 'low' : 'balanced');
+            const cCat = (cStat.level === 'very_high' || cStat.level === 'moderate_high') ? 'high' : ((cStat.level === 'very_low' || cStat.level === 'moderate_low') ? 'low' : 'balanced');
+
+            const ncKey = `${nCat}_N_${cCat}_C`;
+            const ncInteractions = {
+                "high_N_high_C": `<strong>High vigilance, high structure:</strong> Combining your threat sensitivity (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with strict behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates a heavily managed daily routine. You anticipate disruptions and build extensive contingency plans. This ensures high reliability but requires active monitoring of fatigue to prevent burnout from over-planning.`,
+                "high_N_low_C": `<strong>High vigilance, low structure:</strong> Combining your threat sensitivity (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with low behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates operational friction. You detect stressors quickly but lack automated routines to process them. This requires outsourcing organization to external tools and calendars to prevent task pileup during high-pressure periods.`,
+                "low_N_high_C": `<strong>Low vigilance, high structure:</strong> Combining your emotional stability (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with strict behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates a resilient operating system. You execute complex logistical tasks without experiencing stress spikes. This requires ensuring your adherence to schedules does not create bottlenecks for team members who require flexible workflows.`,
+                "low_N_low_C": `<strong>Low vigilance, low structure:</strong> Combining your emotional stability (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with low behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates a highly reactive routine. You ignore minor disruptions and prefer ad-hoc problem solving. This requires implementing basic task-tracking to ensure critical administrative deadlines are not missed during periods of low urgency.`,
+                "high_N_balanced_C": `<strong>High vigilance, moderate structure:</strong> Combining your threat sensitivity (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with standard behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates a cautious but functional workflow. You anticipate risks accurately and apply just enough planning to mitigate them without overcomplicating the solution.`,
+                "low_N_balanced_C": `<strong>Low vigilance, moderate structure:</strong> Combining your emotional stability (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with standard behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates a pragmatic operational style. You maintain baseline organization and handle environmental friction directly without requiring rigid schedules to stay on track.`,
+                "balanced_N_high_C": `<strong>Moderate vigilance, high structure:</strong> Combining baseline threat sensitivity (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with strict behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates a highly dependable output. You maintain clear operational boundaries and rely on systematic routines to process normal daily stressors efficiently.`,
+                "balanced_N_low_C": `<strong>Moderate vigilance, low structure:</strong> Combining baseline threat sensitivity (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with low behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates an easygoing operational tempo. You process standard daily demands as they arise and pivot easily when external schedules change.`,
+                "balanced_N_balanced_C": `<strong>Moderate vigilance, moderate structure:</strong> Combining baseline threat sensitivity (<span class="synthesis-highlight">Neuroticism: ${this.getOrdinal(nStat.pct)} percentile</span>) with standard behavioral control (<span class="synthesis-highlight">Conscientiousness: ${this.getOrdinal(cStat.pct)} percentile</span>) creates a calibrated operational baseline. You scale your organizational efforts directly to the complexity of the task and recover standard operating capacity quickly after disruptions.`
+            };
+
+            const p2 = ncInteractions[ncKey] || ncInteractions["balanced_N_balanced_C"];
+
+            const secondaryModulators = domainStats
+                .filter(d => d.name !== primaryDriver.name && d.name !== primaryConstraint.name && d.name !== "Neuroticism" && d.name !== "Conscientiousness")
+                .map(d => `${d.displayName} (${this.getOrdinal(d.pct)} percentile)`);
+
+            const modText = secondaryModulators.length > 0
+                ? `These core metrics are further modulated by your ${secondaryModulators.join(" and ")}.`
+                : `These primary forces interact continuously with your remaining traits to establish your baseline.`;
+
+            const p3 = `<strong>System integration:</strong> ${modText} To optimize daily workflows, allocate resources toward your primary driver (<span class="synthesis-highlight">${primaryDriver.displayName}</span>) while relying on automated systems to offset your primary constraint (<span class="synthesis-highlight">${primaryConstraint.displayName}</span>). Auditing these interactions allows you to calibrate schedules, manage interpersonal friction, and maintain baseline operational capacity.`;
 
             return `
             <div class="synthesis-card">
                 <div class="synthesis-header">
                     <h2>Core Profile Synthesis</h2>
-                    <span class="synthesis-subtitle">Holistic Trait Configuration & Life Management Analysis</span>
+                    <span class="synthesis-subtitle">Operational Baseline & Workflow Analysis</span>
                 </div>
                 <div class="synthesis-body">
                     <p>${p1}</p>
+                    <p>${p2}</p>
+                    <p>${p3}</p>
                 </div>
             </div>`;
         },
@@ -536,7 +568,10 @@ let normativeData = {
             document.getElementById('results-view').classList.remove('hidden');
 
             const container = document.getElementById('scores-container');
+
             const levels = {};
+            const domainScores = {};
+            const exactZScores = {};
 
             resultsData.domains.forEach(d => {
                 let domainTotal = 0;
@@ -550,23 +585,27 @@ let normativeData = {
                     else if (aZ <= 1.2) levels[a] = 'moderate_high';
                     else levels[a] = 'very_high';
                 });
+                domainScores[d.name] = domainTotal;
                 const dZ = calculateZScoreFn(domainTotal, d.name, normativeData);
+                exactZScores[d.name] = dZ;
                 if (dZ < -1.2) levels[d.name] = 'very_low';
                 else if (dZ < -0.4) levels[d.name] = 'moderate_low';
                 else if (dZ <= 0.4) levels[d.name] = 'balanced';
                 else if (dZ <= 1.2) levels[d.name] = 'moderate_high';
                 else levels[d.name] = 'very_high';
+
+                const map = { "Extraversion": "E", "Conscientiousness": "C", "Neuroticism": "N", "Agreeableness": "A", "Openness/Intellect": "O" };
+                if (map[d.name]) levels[map[d.name]] = levels[d.name];
             });
 
             const synthesisHTML = this.generateWholeProfileSummary(scores);
 
-            let html = `
-            <div class="results-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-                <h3>${resultsData.title}</h3>
-                <button type="button" onclick="app.downloadPDF()">📄 Download PDF Report</button>
+            let html = `<div class="results-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 24px;">
+                <h3 style="margin: 0;">${resultsData.title} (Normative Statistical Model)</h3>
+                <button type="button" onclick="app.downloadPDF()" style="padding: 10px 22px; font-size: 0.95em; border-radius: 8px; background: #2c3e50; color: white; border: none; cursor: pointer; font-weight: 700; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(44, 62, 80, 0.2); transition: background 0.2s, transform 0.1s;" data-html2canvas-ignore="true">📄 Download PDF Report</button>
             </div>
-            ${synthesisHTML}
-            <h2 class="section-title">1. Your Traits</h2>
+            ${synthesisHTML} 
+            <h2 class="section-title">1. Your Traits (Normative Percentiles & CIs)</h2>
             <div class="profile-grid">`;
 
             resultsData.domains.forEach(domainData => {
@@ -575,14 +614,283 @@ let normativeData = {
                 const t = calculateTScoreFn(z);
                 const pct = calculatePercentileFn(z);
                 const ci = calculateSEMAndCIFn(raw, domainData.name, normativeData);
+                const levelKey = levels[domainData.name] || 'balanced';
+                const badgeClassMap = {
+                    'very_high': 'high',
+                    'moderate_high': 'high',
+                    'balanced': 'average',
+                    'moderate_low': 'low',
+                    'very_low': 'low'
+                };
+                const badgeClass = badgeClassMap[levelKey] || 'average';
+                const badgeText = levelKey.replace(/_/g, ' ').toUpperCase();
 
                 html += `
-                <div class="domain-summary-card">
-                    <h3>${domainData.name}</h3>
-                    <p><strong>${this.getOrdinal(pct)} Percentile</strong> (Z = ${z.toFixed(2)} | T = ${t})</p>
-                    <p>Raw: ${raw} | 95% CI: ${this.getOrdinal(ci.ciPctLow)}–${this.getOrdinal(ci.ciPctHigh)} Pct</p>
+                <div class="domain-summary-card" style="text-align: left; padding: 20px;">
+                    <div class="domain-header-simple" style="border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                            <h3 style="margin: 0; font-size: 1.25em; color: #2c3e50; line-height: 1.2;">${domainData.name}</h3>
+                            <span class="score-badge ${badgeClass}" style="white-space: nowrap; margin-left: 8px;">${badgeText}</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <span style="font-size: 1.05em; font-weight: 600; color: #34495e;">${this.getOrdinal(pct)} Percentile</span>
+                            <span style="font-size: 0.8em; color: #7f8c8d;">Z = ${z > 0 ? '+' : ''}${z.toFixed(2)} | T = ${t}</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 16px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75em; color: #95a5a6; margin-bottom: 4px;">
+                            <span>0th</span>
+                            <span>50th (Mean)</span>
+                            <span>100th</span>
+                        </div>
+                        <div class="score-bar" style="position: relative; height: 12px; background: #ecf0f1; border-radius: 6px; overflow: visible;">
+                            <div style="position: absolute; left: ${ci.ciPctLow}%; width: ${Math.max(2, ci.ciPctHigh - ci.ciPctLow)}%; height: 100%; background: rgba(52, 152, 219, 0.25); border-left: 1px solid #2980b9; border-right: 1px solid #2980b9;" title="95% CI: ${this.getOrdinal(ci.ciPctLow)} - ${this.getOrdinal(ci.ciPctHigh)} Percentile"></div>
+                            <div class="score-fill" style="width: ${pct}%; background: ${pct > 88 ? '#e74c3c' : pct > 64 ? '#e67e22' : pct > 35 ? '#2ecc71' : pct > 11 ? '#3498db' : '#9b59b6'}; border-radius: 6px 0 0 6px;"></div>
+                            <div style="position: absolute; left: 50%; top: -2px; bottom: -2px; width: 2px; background: #bdc3c7; z-index: 2;" title="Demographic Mean"></div>
+                        </div>
+                        <div style="font-size: 0.78em; color: #555; margin-top: 8px; display: flex; flex-direction: column; gap: 3px;">
+                            <span><strong>Raw:</strong> ${raw}/100</span>
+                            <span><strong>95% CI:</strong> ${this.getOrdinal(ci.ciPctLow)}–${this.getOrdinal(ci.ciPctHigh)} Pct (SEM ±${ci.sem})</span>
+                        </div>
+                    </div>
+
+                    <div class="aspect-breakdown-simple" style="margin-top: 16px; border-top: 1px dashed #e1e8ed; padding-top: 12px;">
+                        <div style="font-size: 0.85em; font-weight: bold; color: #34495e; margin-bottom: 10px;">Aspect Breakdown (Normative)</div>
+                        ${domainData.aspects.map(aspect => {
+                            const aRaw = scores[aspect] || 0;
+                            const aZ = calculateZScoreFn(aRaw, aspect, normativeData);
+                            const aT = calculateTScoreFn(aZ);
+                            const aPct = calculatePercentileFn(aZ);
+                            const aCi = calculateSEMAndCIFn(aRaw, aspect, normativeData);
+                            return `
+                            <div style="margin-bottom: 12px; background: #f8f9fa; padding: 10px; border-radius: 6px; border: 1px solid #f0f2f5;">
+                                <div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 6px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <strong style="color: #2c3e50; font-size: 0.9em;">${aspect}</strong>
+                                        <strong style="color: #34495e; font-size: 0.9em;">${this.getOrdinal(aPct)} Pct</strong>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between; font-size: 0.75em; color: #7f8c8d;">
+                                        <span>Raw: ${aRaw}/50</span>
+                                        <span>Z: ${aZ > 0 ? '+' : ''}${aZ.toFixed(2)} | T: ${aT}</span>
+                                    </div>
+                                </div>
+                                <div class="mini-bar-simple" style="width: 100%; height: 6px; background: #e0e0e0; position: relative; overflow: visible;">
+                                    <div style="position: absolute; left: ${aCi.ciPctLow}%; width: ${Math.max(2, aCi.ciPctHigh - aCi.ciPctLow)}%; height: 100%; background: rgba(52, 152, 219, 0.35);"></div>
+                                    <div class="mini-fill" style="width: ${aPct}%; background: #3498db; border-radius: 3px;"></div>
+                                    <div style="position: absolute; left: 50%; top: -1px; bottom: -1px; width: 1.5px; background: #bdc3c7;"></div>
+                                </div>
+                                <div style="font-size: 0.72em; color: #7f8c8d; margin-top: 4px; text-align: right;">
+                                    95% CI: ${this.getOrdinal(aCi.ciPctLow)}–${this.getOrdinal(aCi.ciPctHigh)}
+                                </div>
+                            </div>`;
+                        }).join('')}
+                    </div>
                 </div>`;
             });
+            html += `</div>`;
+
+            // --- 3. Layer 1: Single Dimensions ---
+            html += `<h2 class="section-title" style="margin-top:60px;">2. Behavioral Insights (Deep Dive)</h2>
+                     <p class="section-desc">Analysis of your primary traits and their professional implications.</p>
+                     <div class="insights-container">`;
+
+            resultsData.domains.forEach(d => {
+                const dimKey = d.name.toLowerCase().split('/')[0];
+                const lvl = levels[d.name];
+                const dRaw = scores[d.id] || scores[d.name] || 0;
+                const dPct = calculatePercentileFn(calculateZScoreFn(dRaw, d.name, normativeData));
+
+                if (resultsData.layer_1_single_dimensions[dimKey] && resultsData.layer_1_single_dimensions[dimKey][lvl]) {
+                    const insight = resultsData.layer_1_single_dimensions[dimKey][lvl];
+                    let textContent = '';
+                    if (insight.insight_professional || insight.insight_social_personal || insight.everyday_operational_habits) {
+                        textContent += `<div class="layer1-text" style="margin-bottom: 16px;">`;
+                        if (insight.insight_professional) {
+                            textContent += `
+                            <div style="margin-bottom: 12px;">
+                                <h4 style="margin: 0 0 4px 0; color: #2c3e50; font-size: 0.95em;">💼 Professional & Crisis Behavior</h4>
+                                <p style="margin: 0; color: #444; line-height: 1.5;">${insight.insight_professional}</p>
+                            </div>`;
+                        }
+                        if (insight.insight_social_personal) {
+                            textContent += `
+                            <div style="margin-bottom: 12px;">
+                                <h4 style="margin: 0 0 4px 0; color: #2c3e50; font-size: 0.95em;">🤝 Social & Interpersonal Dynamics</h4>
+                                <p style="margin: 0; color: #444; line-height: 1.5;">${insight.insight_social_personal}</p>
+                            </div>`;
+                        }
+                        if (insight.everyday_operational_habits) {
+                            textContent += `
+                            <div style="margin-bottom: 6px;">
+                                <h4 style="margin: 0 0 4px 0; color: #2c3e50; font-size: 0.95em;">⚙️ Everyday Operational Habits</h4>
+                                <p style="margin: 0; color: #444; line-height: 1.5;">${insight.everyday_operational_habits}</p>
+                            </div>`;
+                        }
+                        textContent += `</div>`;
+                    } else if (insight.insight) {
+                        textContent = `<p class="layer1-text">${insight.insight}</p>`;
+                    }
+
+                    let devFocusContent = '';
+                    if (insight.actionable_insights && Array.isArray(insight.actionable_insights)) {
+                        devFocusContent = `<ul style="margin: 6px 0 0 18px; padding: 0; color: #555; line-height: 1.6;">${insight.actionable_insights.map(item => `<li style="margin-bottom: 4px;">${item}</li>`).join('')}</ul>`;
+                    } else if (insight.developmental_focus) {
+                        devFocusContent = `<ul style="margin: 6px 0 0 18px; padding: 0;"><li>${insight.developmental_focus}</li></ul>`;
+                    }
+
+                    html += `
+                    <div class="insight-card layer1-card">
+                        <div class="insight-header">
+                            <h3>${d.name}: ${lvl.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} (${this.getOrdinal(dPct)} Percentile)</h3>
+                        </div>
+                        ${textContent}
+                        <div class="layer1-grid">
+                            <div class="l1-box strength">
+                                <strong>📈 Key Strength</strong>
+                                <p>${insight.key_strength || ''}</p>
+                            </div>
+                            <div class="l1-box challenge">
+                                <strong>⚠️ Potential Challenge</strong>
+                                <p>${insight.potential_challenge || ''}</p>
+                            </div>
+                        </div>
+                        ${insight.environmental_preference ? `<p class="env-pref"><strong>🏢 Environment:</strong> ${insight.environmental_preference}</p>` : ''}
+                        ${devFocusContent ? `<div class="habits-box" style="margin-top: 14px; background: #fff8e7; border-left: 4px solid #f39c12; padding: 12px 16px; border-radius: 4px;"><strong style="color: #d68910; display: block; margin-bottom: 6px;">🎯 Actionable Interventions & Developmental Focus:</strong>${devFocusContent}</div>` : ''}
+                    </div>`;
+                }
+
+                d.aspects.forEach(aspectName => {
+                    let aspectKey = aspectName.toLowerCase().replace(/[\s/]/g, '_');
+                    if (aspectKey === 'openness') aspectKey = 'openness_aspect';
+                    const aLvl = levels[aspectName];
+                    const aRaw = scores[aspectName] || 0;
+                    const aPct = calculatePercentileFn(calculateZScoreFn(aRaw, aspectName, normativeData));
+
+                    if (resultsData.layer_1_single_dimensions[aspectKey] && resultsData.layer_1_single_dimensions[aspectKey][aLvl]) {
+                        const insight = resultsData.layer_1_single_dimensions[aspectKey][aLvl];
+                        let textContent = '';
+                        if (insight.insight_professional || insight.insight_social_personal || insight.everyday_operational_habits) {
+                            textContent += `<div class="layer1-text" style="margin-bottom: 16px;">`;
+                            if (insight.insight_professional) {
+                                textContent += `
+                                <div style="margin-bottom: 12px;">
+                                    <h4 style="margin: 0 0 4px 0; color: #2c3e50; font-size: 0.95em;">💼 Professional & Crisis Behavior</h4>
+                                    <p style="margin: 0; color: #444; line-height: 1.5;">${insight.insight_professional}</p>
+                                </div>`;
+                            }
+                            if (insight.insight_social_personal) {
+                                textContent += `
+                                <div style="margin-bottom: 12px;">
+                                    <h4 style="margin: 0 0 4px 0; color: #2c3e50; font-size: 0.95em;">🤝 Social & Interpersonal Dynamics</h4>
+                                    <p style="margin: 0; color: #444; line-height: 1.5;">${insight.insight_social_personal}</p>
+                                </div>`;
+                            }
+                            if (insight.everyday_operational_habits) {
+                                textContent += `
+                                <div style="margin-bottom: 6px;">
+                                    <h4 style="margin: 0 0 4px 0; color: #2c3e50; font-size: 0.95em;">⚙️ Everyday Operational Habits</h4>
+                                    <p style="margin: 0; color: #444; line-height: 1.5;">${insight.everyday_operational_habits}</p>
+                                </div>`;
+                            }
+                            textContent += `</div>`;
+                        } else if (insight.insight) {
+                            textContent = `<p class="layer1-text">${insight.insight}</p>`;
+                        }
+
+                        let devFocusContent = '';
+                        if (insight.actionable_insights && Array.isArray(insight.actionable_insights)) {
+                            devFocusContent = `<ul style="margin: 6px 0 0 18px; padding: 0; color: #555; line-height: 1.6;">${insight.actionable_insights.map(item => `<li style="margin-bottom: 4px;">${item}</li>`).join('')}</ul>`;
+                        } else if (insight.developmental_focus) {
+                            devFocusContent = `<ul style="margin: 6px 0 0 18px; padding: 0;"><li>${insight.developmental_focus}</li></ul>`;
+                        }
+
+                        html += `
+                        <div class="insight-card layer1-card" style="margin-left: 20px; border-left: 4px solid #3498db; background: #fafbfc;">
+                            <div class="insight-header">
+                                <h3 style="font-size: 1.08em; color: #34495e;">↳ Aspect — ${aspectName}: ${aLvl.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} (${this.getOrdinal(aPct)} Percentile)</h3>
+                            </div>
+                            ${textContent}
+                            <div class="layer1-grid">
+                                <div class="l1-box strength">
+                                    <strong>📈 Key Strength</strong>
+                                    <p>${insight.key_strength || ''}</p>
+                                </div>
+                                <div class="l1-box challenge">
+                                    <strong>⚠️ Potential Challenge</strong>
+                                    <p>${insight.potential_challenge || ''}</p>
+                                </div>
+                            </div>
+                            ${insight.environmental_preference ? `<p class="env-pref"><strong>🏢 Environment:</strong> ${insight.environmental_preference}</p>` : ''}
+                            ${devFocusContent ? `<div class="habits-box" style="margin-top: 14px; background: #fff8e7; border-left: 4px solid #f39c12; padding: 12px 16px; border-radius: 4px;"><strong style="color: #d68910; display: block; margin-bottom: 6px;">🎯 Actionable Interventions & Developmental Focus:</strong>${devFocusContent}</div>` : ''}
+                        </div>`;
+                    }
+                });
+            });
+            html += `</div>`;
+
+            // --- 4. Layer 2: Intersections ---
+            html += `<h2 class="section-title" style="margin-top:60px;">3. Interaction Matrix (Work & Conflict)</h2>
+                     <p class="section-desc">How your traits combine to shape your leadership and conflict style.</p>
+                     <div class="insights-container">`;
+
+            // 4A. Work & Execution Style (E + C)
+            const to3Tier = (l) => l.includes('high') ? 'high' : l.includes('low') ? 'low' : 'average';
+            const eLvl = levels["Extraversion"];
+            const cLvl = levels["Conscientiousness"];
+            const workKeyExact = `E_${eLvl}_C_${cLvl}`;
+            const workKey3T = `E_${to3Tier(eLvl)}_C_${to3Tier(cLvl)}`;
+            const workObj = resultsData.layer_2_intersections.work_and_execution_style || resultsData.layer_2_intersections.work_style || {};
+            let workMatrix = workObj[workKeyExact] || workObj[workKey3T] || workObj.mixed_interaction_fallback;
+
+            if (workMatrix) {
+                let insightsHtml = '';
+                if (workMatrix.actionable_insights && Array.isArray(workMatrix.actionable_insights)) {
+                    insightsHtml = `<ul style="margin: 6px 0 0 18px; padding: 0; color: #555; line-height: 1.6;">${workMatrix.actionable_insights.map(item => `<li style="margin-bottom: 4px;">${item}</li>`).join('')}</ul>`;
+                } else if (workMatrix.growth_challenge) {
+                    insightsHtml = `<ul style="margin: 6px 0 0 18px; padding: 0;"><li>${workMatrix.growth_challenge}</li></ul>`;
+                }
+
+                html += `
+                <div class="matrix-card">
+                    <div class="matrix-header">
+                        <span class="matrix-title">Work & Execution Style</span>
+                        <h3>${workMatrix.profile_name}</h3>
+                    </div>
+                    <p class="matrix-summary">${workMatrix.detailed_analysis || ''}</p>
+                    ${workMatrix.social_dynamic ? `<p style="margin-top: 10px;"><strong>🤝 Social Dynamic:</strong> ${workMatrix.social_dynamic}</p>` : ''}
+                    ${workMatrix.blindspot_warning ? `<p style="margin-top: 10px;"><strong>⚠️ Blindspot Warning:</strong> ${workMatrix.blindspot_warning}</p>` : ''}
+                    ${insightsHtml ? `<div class="advice-box" style="margin-top: 12px;"><strong style="display: block; margin-bottom: 6px;">🌱 Actionable Insights / Growth Challenge:</strong> ${insightsHtml}</div>` : ''}
+                </div>`;
+            }
+
+            // 4B. Relationship & Conflict Style (A + N)
+            const aLvl = levels["Agreeableness"];
+            const nLvl = levels["Neuroticism"];
+            const conflictKeyExact = `A_${aLvl}_N_${nLvl}`;
+            const conflictKey3T = `A_${to3Tier(aLvl)}_N_${to3Tier(nLvl)}`;
+            const conflictObj = resultsData.layer_2_intersections.relationship_and_conflict_style || resultsData.layer_2_intersections.conflict_style || {};
+            let conflictMatrix = conflictObj[conflictKeyExact] || conflictObj[conflictKey3T] || conflictObj.mixed_interaction_fallback;
+
+            if (conflictMatrix) {
+                let insightsHtml = '';
+                if (conflictMatrix.actionable_insights && Array.isArray(conflictMatrix.actionable_insights)) {
+                    insightsHtml = `<ul style="margin: 6px 0 0 18px; padding: 0; color: #555; line-height: 1.6;">${conflictMatrix.actionable_insights.map(item => `<li style="margin-bottom: 4px;">${item}</li>`).join('')}</ul>`;
+                } else if (conflictMatrix.advice) {
+                    insightsHtml = `<ul style="margin: 6px 0 0 18px; padding: 0;"><li>${conflictMatrix.advice}</li></ul>`;
+                }
+
+                html += `
+                 <div class="matrix-card">
+                     <div class="matrix-header">
+                         <span class="matrix-title">Relationship & Conflict Style</span>
+                         <h3>${conflictMatrix.profile_name}</h3>
+                     </div>
+                     <p class="matrix-summary">${conflictMatrix.conflict_tactic || ''}</p>
+                     ${insightsHtml ? `<div class="advice-box" style="margin-top: 12px;"><strong style="display: block; margin-bottom: 6px;">💡 Actionable Insights / Professional Advice:</strong> ${insightsHtml}</div>` : ''}
+                 </div>`;
+            }
+
             html += `</div>`;
 
             container.innerHTML = html;
