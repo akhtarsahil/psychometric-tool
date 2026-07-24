@@ -128,7 +128,7 @@ const surveyStructure = {
         "reverse": true
     },
     {
-        "text": "I take no time for others.",
+        "text": "I make no time for others.",
         "domain": "Agreeableness",
         "aspect": "Compassion",
         "reverse": true

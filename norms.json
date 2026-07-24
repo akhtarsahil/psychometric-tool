@@ -1,0 +1,21 @@
+{
+    "aspects": {
+        "Volatility": { "mean": 29.3, "sd": 7.2, "reliability": 0.89 },
+        "Withdrawal": { "mean": 30.0, "sd": 6.2, "reliability": 0.87 },
+        "Compassion": { "mean": 39.9, "sd": 5.4, "reliability": 0.84 },
+        "Politeness": { "mean": 36.3, "sd": 5.3, "reliability": 0.81 },
+        "Industriousness": { "mean": 31.7, "sd": 5.5, "reliability": 0.86 },
+        "Orderliness": { "mean": 33.8, "sd": 6.1, "reliability": 0.85 },
+        "Enthusiasm": { "mean": 36.2, "sd": 6.3, "reliability": 0.85 },
+        "Assertiveness": { "mean": 33.5, "sd": 6.6, "reliability": 0.88 },
+        "Intellect": { "mean": 35.6, "sd": 6.0, "reliability": 0.84 },
+        "Openness": { "mean": 38.0, "sd": 5.5, "reliability": 0.84 }
+    },
+    "domains": {
+        "Neuroticism": { "mean": 59.3, "sd": 11.9, "reliability": 0.90 },
+        "Agreeableness": { "mean": 76.2, "sd": 9.0, "reliability": 0.87 },
+        "Conscientiousness": { "mean": 65.5, "sd": 9.9, "reliability": 0.89 },
+        "Extraversion": { "mean": 69.7, "sd": 11.0, "reliability": 0.91 },
+        "Openness/Intellect": { "mean": 73.6, "sd": 9.5, "reliability": 0.87 }
+    }
+}
