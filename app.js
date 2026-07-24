@@ -211,6 +211,7 @@ let normativeData = {
             const cachedItems = sessionStorage.getItem('bfas_surveyItems');
             const cachedAnswers = sessionStorage.getItem('bfas_userAnswers');
             const cachedPage = sessionStorage.getItem('bfas_currentPage');
+            const cachedClearedPages = sessionStorage.getItem('bfas_clearedPages');
 
             if (cachedItems && cachedAnswers && cachedPage) {
                 const parsedItems = JSON.parse(cachedItems);
@@ -221,6 +222,9 @@ let normativeData = {
                     this.surveyItems = parsedItems;
                     this.userAnswers = parsedAnswers;
                     this.currentPage = parsedPage;
+                    if (cachedClearedPages) {
+                        this.clearedPages = JSON.parse(cachedClearedPages);
+                    }
                     document.getElementById('intro-view').classList.add('hidden');
                     document.getElementById('survey-form').classList.remove('hidden');
                     document.getElementById('results-view').classList.add('hidden');
@@ -274,6 +278,7 @@ let normativeData = {
             sessionStorage.setItem('bfas_surveyItems', JSON.stringify(this.surveyItems));
             sessionStorage.removeItem('bfas_userAnswers');
             sessionStorage.removeItem('bfas_currentPage');
+            sessionStorage.removeItem('bfas_clearedPages');
             this.startTimestamp = Date.now();
             document.getElementById('intro-view').classList.add('hidden');
             document.getElementById('survey-form').classList.remove('hidden');
@@ -295,6 +300,7 @@ let normativeData = {
             }
             sessionStorage.setItem('bfas_userAnswers', JSON.stringify(this.userAnswers));
             sessionStorage.setItem('bfas_currentPage', this.currentPage);
+            sessionStorage.setItem('bfas_clearedPages', JSON.stringify(this.clearedPages));
         },
 
         nextPage: function () {

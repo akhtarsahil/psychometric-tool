@@ -1542,65 +1542,65 @@ const resultsData = {
                 ]
             }
         },
-        "agreeableness": {
+"agreeableness": {
             "very_low": {
                 "insight_professional": "You are highly antagonistic and strictly objective, prioritizing blunt truth and competitive advantage over team cohesion.",
                 "insight_social_personal": "Your relationships are often built on debate, shared activities, or utility rather than emotional vulnerability. You are fiercely independent and unbothered by social disapproval.",
-                "everyday_operational_habits": "You optimize for efficiency and self-interest. You do not waste time on social pleasantries or obligations you deem illogical.",
+                "everyday_operational_habits": "You optimize for efficiency and self-interest. You do not waste time on social obligations you deem illogical.",
                 "key_strength": "Completely unhindered by social pressure; capable of making ruthless, necessary decisions.",
                 "potential_challenge": "Your directness is often perceived as aggressive hostility, severely limiting deep interpersonal intimacy and professional alliances.",
                 "environmental_preference": "Hyper-competitive, meritocratic environments where debate is the default state.",
                 "actionable_insights": [
-                    "Before delivering a critique, internally identify the strongest point the other person has made to ensure your pushback is objective rather than purely combative.",
-                    "Audit your relationships: Ensure you have at least one dynamic that is entirely based on mutual care rather than utility or debate."
+                    "Audit the opposing argument to isolate its most structurally sound data point before delivering a critique. This verifies your pushback remains objective rather than reflexively antagonistic.",
+                    "Review your active partnerships to verify the existence of at least one non-transactional dynamic. Operational sustainability requires baseline support independent of continuous debate."
                 ]
             },
             "moderate_low": {
                 "insight_professional": "You are skeptical and direct. You value utility over social harmony, acting as an effective critical thinker who challenges group consensus.",
-                "insight_social_personal": "You are fiercely loyal to a small inner circle but maintain a guarded, analytical approach to new people. You show love by solving problems, not through excessive warmth.",
+                "insight_social_personal": "You are fiercely loyal to a small inner circle but maintain a guarded, analytical approach to new people. You show support by solving problems, not through excessive warmth.",
                 "everyday_operational_habits": "You protect your time and resources well, easily saying 'no' to social requests or obligations that drain you.",
                 "key_strength": "Filtering out groupthink and ensuring decisions are based on data rather than social comfort.",
                 "potential_challenge": "Unnecessarily escalating minor disagreements by focusing entirely on technical truth rather than the emotional context.",
                 "environmental_preference": "Results-oriented cultures that normalize direct, unvarnished feedback.",
                 "actionable_insights": [
-                    "Ask yourself if winning a minor argument with a loved one is worth the relational capital it will cost.",
-                    "When someone comes to you with a problem, default to asking, 'Do you want comfort or solutions?' before deploying your analytical skills."
+                    "Calculate the long-term systemic cost of a minor dispute before escalating it. Winning an inconsequential argument often damages the necessary baseline trust of a functional partnership.",
+                    "Pause all analytical problem-solving when a partner reports distress. Internally classify the situation as a requirement for active listening rather than an immediate logistical error to be fixed."
                 ]
             },
             "balanced": {
                 "insight_professional": "You navigate social dynamics pragmatically, cooperating easily but maintaining clear boundaries for healthy pushback.",
-                "insight_social_personal": "You are generally warm and supportive, but you do not sacrifice your core needs to keep the peace. You can handle conflict when it arises.",
-                "everyday_operational_habits": "You engage in community and social obligations willingly, but withdraw to protect your own energy when necessary.",
-                "key_strength": "Building consensus without becoming a pushover; maintaining balanced reciprocity.",
-                "potential_challenge": "Occasionally sending mixed signals by switching rapidly between warmth and strict objectivity.",
+                "insight_social_personal": "You are generally warm and supportive, but you do not sacrifice your core needs to keep the peace. You handle conflict efficiently when it arises.",
+                "everyday_operational_habits": "You engage in community obligations willingly, but withdraw to protect your own energy when necessary.",
+                "key_strength": "Building consensus without yielding core objectives; maintaining balanced reciprocity.",
+                "potential_challenge": "Occasionally sending mixed signals by switching rapidly between strict objectivity and supportive consensus.",
                 "environmental_preference": "Environments that value teamwork but respect individual boundaries.",
                 "actionable_insights": [
-                    "Clearly signal your mode to others: 'I'm putting on my critical thinking hat for a second,' to soften the transition to objectivity.",
-                    "Regularly audit your close relationships to ensure the give-and-take remains equitable."
+                    "State your objective transition explicitly before delivering critical feedback. This structural boundary prevents peers from mistaking an analytical review for a personal attack.",
+                    "Execute a periodic resource audit on your primary relationships. Verify that the time and energy you provide are matched by reciprocal output to prevent systemic imbalance."
                 ]
             },
             "moderate_high": {
                 "insight_professional": "You are highly collaborative, prioritizing team morale and naturally facilitating smooth operations, though you hesitate to deliver harsh feedback.",
                 "insight_social_personal": "You are deeply empathetic and heavily prioritize the needs of your family and friends, often acting as the emotional glue of your social circle.",
-                "everyday_operational_habits": "Your day is heavily influenced by the needs of others. You are likely to derail your own plans to help someone else.",
+                "everyday_operational_habits": "Your day is heavily influenced by the needs of others. You frequently derail your own plans to provide assistance.",
                 "key_strength": "Actively mitigating friction and building highly loyal, deeply connected relationships.",
                 "potential_challenge": "Suppressing your own valid grievances or accepting subpar treatment to avoid the discomfort of confrontation.",
                 "environmental_preference": "Mission-driven, communal cultures that emphasize shared human success.",
                 "actionable_insights": [
-                    "Reframe boundary-setting: Saying 'no' to an unreasonable request is actually a protective measure for your long-term relationship with that person.",
-                    "Practice delivering 'micro-corrections' (small pieces of critical feedback) daily to build your tolerance for interpersonal friction."
+                    "Classify the rejection of unreasonable requests as a required maintenance protocol. Establishing strict limits directly prevents the accumulation of long-term resentment.",
+                    "Deliver low-level critical feedback on a consistent schedule. Standardizing this action desensitizes your response to conflict and prevents minor operational errors from compounding."
                 ]
             },
             "very_high": {
-                "insight_professional": "You are extremely accommodating and conflict-averse, prioritizing the emotional comfort of others to the extent that you suppress your own needs.",
-                "insight_social_personal": "You are a chronic people-pleaser. You likely attract dominant personalities and struggle deeply to express anger or assert boundaries in your romantic life.",
+                "insight_professional": "You are extremely accommodating and conflict-averse, prioritizing the emotional comfort of others to the extent that you suppress your own requirements.",
+                "insight_social_personal": "You operate as a chronic accommodator. You likely attract dominant personalities and struggle deeply to assert boundaries in your romantic life.",
                 "everyday_operational_habits": "Your lifestyle is entirely dictated by external obligations. You absorb the emotional weight of your household, leading to chronic exhaustion.",
                 "key_strength": "Immense empathy, selflessness, and profound attunement to the emotional needs of others.",
                 "potential_challenge": "Severe risk of burnout, resentment, and being actively leveraged by highly competitive or narcissistic peers.",
                 "environmental_preference": "Highly supportive, non-competitive environments rooted in caregiving or service.",
                 "actionable_insights": [
-                    "Establish a default delay for all requests: Respond to every favor with, 'Let me check my schedule and get back to you.' Never say yes immediately.",
-                    "Schedule weekly 'selfish time' where you are explicitly forbidden from doing anything that benefits another person."
+                    "Implement a mandatory buffer period for all incoming requests. Review your existing capacity offline before confirming new obligations to prevent baseline exhaustion.",
+                    "Block protected intervals in your schedule strictly allocated for independent recovery. Mandate that zero external assistance or team support occurs during these blocks."
                 ]
             }
         },
