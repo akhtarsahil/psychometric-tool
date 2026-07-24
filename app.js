@@ -178,6 +178,7 @@ let normativeData = {
     const app = {
         surveyItems: [],
         userAnswers: [],
+        clearedPages: [],
         currentPage: 0,
         pageSize: 20,
 
@@ -204,6 +205,7 @@ let normativeData = {
         },
 
         init: function () {
+            this.clearedPages = [];
             this.mountPersistentNodes();
             this.randomizeAndPrepareItems();
 
@@ -263,6 +265,7 @@ let normativeData = {
         },
 
         startSurvey: function () {
+            this.clearedPages = [];
             this.randomizeAndPrepareItems();
             sessionStorage.removeItem('bfas_userAnswers');
             sessionStorage.removeItem('bfas_currentPage');
@@ -290,12 +293,13 @@ let normativeData = {
         },
 
         nextPage: function () {
-            if (!this.isDebug && this.pageStartTime) {
+            if (!this.isDebug && this.pageStartTime && !this.clearedPages.includes(this.currentPage)) {
                 const elapsed = (Date.now() - this.pageStartTime) / 1000;
                 if (elapsed < 15) {
                     alert("Please take at least 15 seconds to carefully read and respond to each statement before proceeding.");
                     return;
                 }
+                this.clearedPages.push(this.currentPage);
             }
             this.saveCurrentPageAnswers();
             const totalPages = Math.ceil(this.surveyItems.length / this.pageSize);
