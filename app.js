@@ -409,6 +409,16 @@ let normativeData = {
         },
 
         submitSurvey: function (isDebug = false) {
+            // Enforce latency on the final page
+            if (!isDebug && this.pageStartTime && !this.clearedPages.includes(this.currentPage)) {
+                const elapsed = (Date.now() - this.pageStartTime) / 1000;
+                if (elapsed < 15) {
+                    alert("Please take at least 15 seconds to carefully read and respond to each statement before proceeding.");
+                    return;
+                }
+                this.clearedPages.push(this.currentPage);
+            }
+
             if (!isDebug) {
                 this.saveCurrentPageAnswers();
             }
