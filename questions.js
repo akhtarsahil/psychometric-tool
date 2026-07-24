@@ -798,7 +798,7 @@ const resultsData = {
             }
         },
         {
-            "id": "Openness",
+            "id": "Openness_Domain",
             "name": "Openness/Intellect",
             "aspects": ["Intellect", "Openness"],
             "levels": {

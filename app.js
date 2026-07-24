@@ -479,13 +479,24 @@ let normativeData = {
                 if (isNaN(val)) return;
                 const scoredVal = item.reverse ? (6 - val) : val;
 
-                if (item.domain && rawScores.hasOwnProperty(item.domain)) {
-                    rawScores[item.domain] += scoredVal;
+                // Map item domain tag ("Openness", "Openness/Intellect", etc.) to target domain ID
+                let domainKey = item.domain;
+                if (domainKey === 'Openness' || domainKey === 'Openness/Intellect') {
+                    domainKey = 'Openness_Domain';
                 }
+
+                if (domainKey && rawScores.hasOwnProperty(domainKey)) {
+                    rawScores[domainKey] += scoredVal;
+                }
+
+                // Aspect accumulation (strictly isolated)
                 if (item.aspect && rawScores.hasOwnProperty(item.aspect)) {
                     rawScores[item.aspect] += scoredVal;
                 }
             });
+
+            // Ensure Openness/Intellect domain key alias reflects the domain tally
+            rawScores['Openness/Intellect'] = rawScores['Openness_Domain'];
 
             this.showResults(rawScores);
         },
