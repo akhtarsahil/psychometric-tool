@@ -207,16 +207,18 @@ let normativeData = {
         init: function () {
             this.clearedPages = [];
             this.mountPersistentNodes();
-            this.randomizeAndPrepareItems();
 
+            const cachedItems = sessionStorage.getItem('bfas_surveyItems');
             const cachedAnswers = sessionStorage.getItem('bfas_userAnswers');
             const cachedPage = sessionStorage.getItem('bfas_currentPage');
 
-            if (cachedAnswers && cachedPage) {
+            if (cachedItems && cachedAnswers && cachedPage) {
+                const parsedItems = JSON.parse(cachedItems);
                 const parsedAnswers = JSON.parse(cachedAnswers);
                 const parsedPage = parseInt(cachedPage, 10);
 
-                if (parsedPage > 0 && parsedAnswers.length === this.surveyItems.length) {
+                if (parsedPage > 0 && parsedAnswers.length === parsedItems.length) {
+                    this.surveyItems = parsedItems;
                     this.userAnswers = parsedAnswers;
                     this.currentPage = parsedPage;
                     document.getElementById('intro-view').classList.add('hidden');
@@ -226,6 +228,8 @@ let normativeData = {
                     return;
                 }
             }
+
+            this.randomizeAndPrepareItems();
 
             document.getElementById('intro-view').classList.remove('hidden');
             document.getElementById('survey-form').classList.add('hidden');
@@ -267,6 +271,7 @@ let normativeData = {
         startSurvey: function () {
             this.clearedPages = [];
             this.randomizeAndPrepareItems();
+            sessionStorage.setItem('bfas_surveyItems', JSON.stringify(this.surveyItems));
             sessionStorage.removeItem('bfas_userAnswers');
             sessionStorage.removeItem('bfas_currentPage');
             this.startTimestamp = Date.now();
@@ -610,10 +615,8 @@ let normativeData = {
             const exactZScores = {};
 
             resultsData.domains.forEach(d => {
-                let domainTotal = 0;
                 d.aspects.forEach(a => {
                     const s = scores[a] || 0;
-                    domainTotal += s;
                     const aZ = calculateZScoreFn(s, a, normativeData);
                     if (aZ < -1.2) levels[a] = 'very_low';
                     else if (aZ < -0.4) levels[a] = 'moderate_low';
@@ -621,9 +624,13 @@ let normativeData = {
                     else if (aZ <= 1.2) levels[a] = 'moderate_high';
                     else levels[a] = 'very_high';
                 });
+                
+                const domainTotal = scores[d.id] || scores[d.name] || 0;
                 domainScores[d.name] = domainTotal;
+                
                 const dZ = calculateZScoreFn(domainTotal, d.name, normativeData);
                 exactZScores[d.name] = dZ;
+                
                 if (dZ < -1.2) levels[d.name] = 'very_low';
                 else if (dZ < -0.4) levels[d.name] = 'moderate_low';
                 else if (dZ <= 0.4) levels[d.name] = 'balanced';

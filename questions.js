@@ -848,6 +848,576 @@ const resultsData = {
         }
     ],
     "layer_1_single_dimensions": {
+        "volatility": {
+          "very_low": {
+                    "insight_professional": "Maintains absolute operational stability regardless of environmental friction or interpersonal conflict.",
+                    "insight_social_personal": "Relates to others strictly through logical problem-solving, rarely exhibiting reactive emotional shifts.",
+                    "everyday_operational_habits": "Processes daily stress without physical or verbal escalation.",
+                    "key_strength": "Immune to emotional contagion; serves as a reliable anchor during crises.",
+                    "potential_challenge": "May dismiss the urgency of team members or partners who require emotional validation.",
+                    "actionable_insights": [
+                              "Acknowledge the emotional state of others explicitly before proposing logistical solutions.",
+                              "Establish predetermined protocols for handling interpersonal disputes to ensure they are addressed."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Exhibits steady execution under pressure, absorbing standard workplace stress without externalizing frustration.",
+                    "insight_social_personal": "Maintains a predictable demeanor in relationships, requiring significant provocation to display anger.",
+                    "everyday_operational_habits": "Navigates routine obstacles efficiently, rarely allowing minor setbacks to derail the daily schedule.",
+                    "key_strength": "Consistent output and interpersonal predictability.",
+                    "potential_challenge": "Occasional reluctance to address rising friction until it becomes unavoidable.",
+                    "actionable_insights": [
+                              "Schedule regular debriefs to vocalize minor frustrations before they accumulate.",
+                              "Practice mirroring the energy of peers during tense situations to demonstrate engagement."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Demonstrates proportional responses to workplace events, utilizing moderate tension to maintain focus.",
+                    "insight_social_personal": "Expresses frustration directly when warranted, but recovers baseline equilibrium quickly.",
+                    "everyday_operational_habits": "Balances focused execution with necessary decompression periods following high-stress tasks.",
+                    "key_strength": "Adaptive responsiveness to both positive momentum and emerging threats.",
+                    "potential_challenge": "Prolonged exposure to chaotic environments can gradually elevate baseline reactivity.",
+                    "actionable_insights": [
+                              "Monitor your recovery time after intense interactions to gauge your current stress load.",
+                              "Implement structured transition periods between high-stress work and personal time."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Quickly detects and reacts to operational friction, serving as an early warning system for project risks.",
+                    "insight_social_personal": "Highly attuned to relational dynamics, though prone to rapid fluctuations in mood based on immediate interactions.",
+                    "everyday_operational_habits": "Requires structured environments to mitigate the impact of unexpected daily disruptions on productivity.",
+                    "key_strength": "Rapid threat detection and swift mobilization in response to emerging problems.",
+                    "potential_challenge": "Tendency to externalize stress, elevating the ambient tension of the team or household.",
+                    "actionable_insights": [
+                              "Implement a strict delay between feeling a reactive impulse and communicating it verbally or digitally.",
+                              "Utilize objective data to verify the severity of a problem before escalating it."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Exhibits immediate, intense reactions to workplace stressors, leading to rapid exhaustion in volatile environments.",
+                    "insight_social_personal": "Experiences interpersonal dynamics with high intensity, frequently requiring external reassurance to stabilize.",
+                    "everyday_operational_habits": "Daily routines are highly vulnerable to disruption by minor inconveniences or negative interactions.",
+                    "key_strength": "Exceptional sensitivity to environmental shifts and profound capacity for empathetic engagement.",
+                    "potential_challenge": "High risk of burnout and conflict escalation due to impaired emotional regulation during stress.",
+                    "actionable_insights": [
+                              "Deploy somatic regulation techniques (e.g., breathwork, physical movement) as a mandatory first response to stress.",
+                              "Limit exposure to unpredictable or high-conflict environments, strictly managing your daily stimulus intake."
+                    ]
+          }
+},
+        "withdrawal": {
+          "very_low": {
+                    "insight_professional": "Operates without hesitation in ambiguous situations, exhibiting zero anticipatory anxiety.",
+                    "insight_social_personal": "Approaches new relationships and social risks with complete confidence and lack of self-consciousness.",
+                    "everyday_operational_habits": "Executes plans decisively without requiring exhaustive preparation or contingency planning.",
+                    "key_strength": "Absolute fearlessness in the face of uncertainty and risk.",
+                    "potential_challenge": "Failure to anticipate genuine hazards or mitigate foreseeable points of failure.",
+                    "actionable_insights": [
+                              "Mandate a 'pre-mortem' analysis before launching new initiatives to explicitly identify potential risks.",
+                              "Consult with highly vigilant team members to uncover blind spots in your planning."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Maintains steady momentum during uncertain projects, assessing risks without becoming paralyzed by them.",
+                    "insight_social_personal": "Engages comfortably in social settings, rarely experiencing imposter syndrome or anticipatory dread.",
+                    "everyday_operational_habits": "Handles routine uncertainty efficiently, proceeding with action rather than over-analyzing.",
+                    "key_strength": "Pragmatic confidence and swift decision-making.",
+                    "potential_challenge": "May occasionally underestimate the preparation required for complex, high-stakes tasks.",
+                    "actionable_insights": [
+                              "Build standard checklists for major projects to ensure basic safety protocols are not bypassed.",
+                              "Verify your confidence against objective metrics before committing resources."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Calculates risks proportionally, preparing for likely contingencies while accepting necessary uncertainty.",
+                    "insight_social_personal": "Experiences normal levels of hesitation in novel situations, but proceeds effectively once acclimated.",
+                    "everyday_operational_habits": "Balances forward momentum with prudent caution in daily decision-making.",
+                    "key_strength": "Optimal calibration between risk assessment and execution.",
+                    "potential_challenge": "Can be tipped into over-caution if operating in an environment with a high penalty for failure.",
+                    "actionable_insights": [
+                              "Clearly define the 'acceptable failure rate' for your current projects to prevent creeping perfectionism.",
+                              "Ensure your risk assessment does not devolve into procrastination when faced with difficult tasks."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Exhibits strong anticipatory vigilance, requiring comprehensive data and planning before committing to action.",
+                    "insight_social_personal": "Prone to self-doubt and hesitation, frequently seeking validation or reassurance before making personal decisions.",
+                    "everyday_operational_habits": "Relies on established routines to minimize exposure to unexpected variables.",
+                    "key_strength": "Thorough preparation and rigorous stress-testing of proposed plans.",
+                    "potential_challenge": "Analysis paralysis and a tendency to abandon projects prematurely at the first sign of friction.",
+                    "actionable_insights": [
+                              "Establish strict time limits for research and data-gathering phases to force execution.",
+                              "Implement a policy of taking the 'next smallest logical step' when feeling overwhelmed by a larger goal."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Experiences severe anticipatory anxiety, leading to profound difficulty operating in ambiguous or high-risk environments.",
+                    "insight_social_personal": "Avoids vulnerability and novel social interactions to protect against perceived threats of rejection or failure.",
+                    "everyday_operational_habits": "Structures daily life primarily around threat avoidance and risk minimization.",
+                    "key_strength": "Unparalleled capacity to identify structural weaknesses and potential failure modes in any system.",
+                    "potential_challenge": "Chronic inaction, avoidance behaviors, and severe susceptibility to discouragement.",
+                    "actionable_insights": [
+                              "Segment all large objectives into micro-tasks, focusing exclusively on completing the immediate action without assessing the final outcome.",
+                              "Systematize your decision-making using rigid rubrics to bypass the need for emotional confidence."
+                    ]
+          }
+},
+        "compassion": {
+          "very_low": {
+                    "insight_professional": "Prioritizes brutal efficiency and factual accuracy over team morale or individual sensitivities.",
+                    "insight_social_personal": "Evaluates relationships primarily on utility and logic, displaying minimal interest in others' emotional states.",
+                    "everyday_operational_habits": "Operates with strict self-interest, ignoring social obligations that do not offer a clear return on investment.",
+                    "key_strength": "Utterly uncompromised objectivity in decision-making and negotiation.",
+                    "potential_challenge": "Alienating critical allies and destroying team cohesion through perceived callousness.",
+                    "actionable_insights": [
+                              "Treat team morale as a quantifiable metric that directly impacts output and must be managed accordingly.",
+                              "Schedule deliberate check-ins with key personnel, strictly to inquire about their operational needs."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Focuses on task completion, offering support only when it directly facilitates project objectives.",
+                    "insight_social_personal": "Maintains functional, low-maintenance relationships, providing practical solutions rather than emotional validation.",
+                    "everyday_operational_habits": "Minimizes time spent on social pleasantries, preferring direct and concise interactions.",
+                    "key_strength": "Clear, unclouded judgment free from emotional bias.",
+                    "potential_challenge": "Failing to build the relational capital necessary to navigate complex political or social environments.",
+                    "actionable_insights": [
+                              "Incorporate a brief, positive acknowledgment of others' efforts before delivering critical feedback.",
+                              "Recognize that investing time in casual rapport functions as a lubricant for future negotiations."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Balances the need for operational efficiency with a pragmatic awareness of team well-being.",
+                    "insight_social_personal": "Offers support and empathy to close contacts while maintaining healthy boundaries against emotional exhaustion.",
+                    "everyday_operational_habits": "Engages socially when appropriate but reliably prioritizes core responsibilities over endless accommodation.",
+                    "key_strength": "Sustainable empathy that supports others without compromising personal output.",
+                    "potential_challenge": "May appear inconsistent, switching between warm support and cold objectivity depending on the context.",
+                    "actionable_insights": [
+                              "Explicitly communicate your current operational mode (e.g., 'I need to focus strictly on the data for this hour').",
+                              "Audit your commitments to ensure you are not disproportionately absorbing the emotional labor of the group."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Actively monitors team morale, frequently intervening to support struggling colleagues and mitigate interpersonal friction.",
+                    "insight_social_personal": "Deeply invested in the well-being of others, often anticipating their needs and offering preemptive care.",
+                    "everyday_operational_habits": "Routinely adjusts personal schedules to accommodate the needs and requests of peers or family members.",
+                    "key_strength": "Fostering intense loyalty, psychological safety, and high-functioning collaborative environments.",
+                    "potential_challenge": "Risk of taking on the emotional burdens of others, leading to personal fatigue and compromised boundaries.",
+                    "actionable_insights": [
+                              "Establish a firm boundary between 'supporting' someone and 'solving' their problem for them.",
+                              "Require others to formally request assistance rather than automatically volunteering your resources."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Prioritizes the emotional comfort of the team above all other metrics, often sacrificing efficiency to avoid causing distress.",
+                    "insight_social_personal": "Operates entirely based on the needs of others, experiencing their pain as if it were personal.",
+                    "everyday_operational_habits": "Daily life is heavily dictated by external demands for emotional or practical support.",
+                    "key_strength": "Profound capacity for caregiving, mediation, and creating environments of absolute trust.",
+                    "potential_challenge": "Severe boundary collapse, emotional burnout, and vulnerability to exploitation by self-interested parties.",
+                    "actionable_insights": [
+                              "Implement a mandatory 24-hour waiting period before agreeing to take on any new emotional or practical burden.",
+                              "Quantify the cost of your extreme accommodation, specifically tracking how it detracts from your primary objectives."
+                    ]
+          }
+},
+        "politeness": {
+          "very_low": {
+                    "insight_professional": "Communicates with absolute bluntness, entirely disregarding hierarchy, social norms, or the potential for offense.",
+                    "insight_social_personal": "Routinely challenges authority and initiates conflict, viewing debate as the primary mode of interaction.",
+                    "everyday_operational_habits": "Ignores social conventions, pursuing objectives with a disruptive and aggressive tempo.",
+                    "key_strength": "Willingness to expose critical flaws and dismantle ineffective systems regardless of the political cost.",
+                    "potential_challenge": "Creating unnecessary enemies and severely limiting long-term career or social viability through constant friction.",
+                    "actionable_insights": [
+                              "Filter your critiques: Ensure every challenge is directed at the process or the data, never at the individual.",
+                              "Calculate the political cost of a battle before initiating it; reserve your aggression for issues of critical importance."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Questions consensus and pushes back against authority when inefficiencies are detected, valuing truth over tact.",
+                    "insight_social_personal": "Communicates directly and assertively, occasionally offending more sensitive individuals in the pursuit of clarity.",
+                    "everyday_operational_habits": "Operates efficiently by bypassing standard bureaucratic pleasantries or indirect communication.",
+                    "key_strength": "Driving honest dialogue and preventing groups from settling for comfortable but flawed solutions.",
+                    "potential_challenge": "Gaining a reputation for being difficult or uncooperative, which can hinder team-based projects.",
+                    "actionable_insights": [
+                              "Adopt a 'criticize in private, praise in public' protocol to mitigate the social damage of your directness.",
+                              "Use interrogative framing (e.g., 'Help me understand how this works') rather than outright declarative attacks."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Respects hierarchical structures and social norms while retaining the capacity to deliver necessary pushback.",
+                    "insight_social_personal": "Navigates social interactions smoothly, deploying tact when necessary but capable of setting firm boundaries.",
+                    "everyday_operational_habits": "Adapts communication style to the context, balancing the need for efficiency with the requirement for civility.",
+                    "key_strength": "Effective diplomacy that preserves relationships while still addressing core issues.",
+                    "potential_challenge": "May occasionally compromise on the severity of feedback to maintain a polite atmosphere.",
+                    "actionable_insights": [
+                              "Ensure that your desire to remain polite does not dilute the clarity of critical instructions.",
+                              "Periodically assess if you are deferring to authority out of genuine agreement or merely out of habit."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Highly compliant with organizational rules and authority, prioritizing smooth, respectful interactions over disruptive innovation.",
+                    "insight_social_personal": "Carefully moderates behavior to avoid causing offense, actively seeking to align with the expectations of the group.",
+                    "everyday_operational_habits": "Operates cautiously, ensuring all actions are vetted and approved by relevant authorities or peers.",
+                    "key_strength": "Creating seamless, frictionless environments that support stable, long-term operations.",
+                    "potential_challenge": "Hesitancy to challenge flawed leadership or voice dissenting opinions, leading to complicity in poor decisions.",
+                    "actionable_insights": [
+                              "Designate specific forums (like brainstorms or retrospectives) where you explicitly practice voicing disagreement.",
+                              "Recognize that withholding critical feedback out of politeness ultimately damages the team's objective."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Exhibits extreme deference to authority, entirely unwilling to initiate conflict or challenge the status quo.",
+                    "insight_social_personal": "Submerges personal opinions and desires completely to comply with external expectations and maintain absolute peace.",
+                    "everyday_operational_habits": "Daily actions are heavily constrained by a fear of stepping out of line or violating social protocols.",
+                    "key_strength": "Absolute reliability in executing established protocols and maintaining the organizational hierarchy.",
+                    "potential_challenge": "Complete inability to advocate for personal needs, advocate for necessary change, or defend against aggression.",
+                    "actionable_insights": [
+                              "Practice making small, definitive statements of preference in low-stakes situations to build a tolerance for self-advocacy.",
+                              "Reframe disagreement: View challenging a flawed idea as an act of duty to the organization, rather than an act of disrespect."
+                    ]
+          }
+},
+        "industriousness": {
+          "very_low": {
+                    "insight_professional": "Operates with minimal self-direction, requiring constant external pressure to initiate and complete tasks.",
+                    "insight_social_personal": "Avoids long-term commitments and views sustained effort as inherently undesirable.",
+                    "everyday_operational_habits": "Routinely delays necessary tasks until the absolute final deadline or until forced by external circumstances.",
+                    "key_strength": "Conserves energy effectively and rarely falls victim to overwork or burnout.",
+                    "potential_challenge": "Chronic underachievement, missed deadlines, and unreliability in both professional and personal domains.",
+                    "actionable_insights": [
+                              "Rely entirely on automated systems and external accountability (e.g., strict management, joint calendars) to force execution.",
+                              "Break all tasks into micro-actions that require less than 5 minutes, focusing only on the immediate next step."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Executes tasks only when immediately necessary, preferring quick sprints of effort followed by long periods of rest.",
+                    "insight_social_personal": "Contributes to household or group goals sporadically, often requiring prompting from partners or peers.",
+                    "everyday_operational_habits": "Prioritizes convenience and leisure, minimizing the time spent on difficult or tedious work.",
+                    "key_strength": "Efficiency through corner-cutting, often finding the path of least resistance to achieve an acceptable result.",
+                    "potential_challenge": "Tendency to abandon projects at the first sign of significant friction or boredom.",
+                    "actionable_insights": [
+                              "Use the 'Pomodoro Technique' (short, intense bursts of timed work) to bypass your natural resistance to sustained effort.",
+                              "Commit publicly to deadlines to manufacture the external pressure required to trigger your execution phase."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Maintains a steady, functional work rate, completing required duties reliably without descending into workaholism.",
+                    "insight_social_personal": "Invests consistent effort into maintaining relationships and household responsibilities, matching the contributions of others.",
+                    "everyday_operational_habits": "Balances periods of focused productivity with intentional, guilt-free downtime.",
+                    "key_strength": "Sustainable output over long timelines without severe fluctuations in energy or commitment.",
+                    "potential_challenge": "May lack the extreme drive required to push through exceptional periods of crisis or intense competition.",
+                    "actionable_insights": [
+                              "Identify high-leverage periods where temporarily increasing your work rate will yield outsized returns.",
+                              "Protect your baseline routine, ensuring that periods of high effort are followed by planned recovery."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Self-driven and highly focused, consistently pushing projects forward and exceeding baseline expectations.",
+                    "insight_social_personal": "Takes proactive ownership of planning and executing shared goals within relationships.",
+                    "everyday_operational_habits": "Structures the day around productivity, finding satisfaction in checking off objectives and clearing backlogs.",
+                    "key_strength": "Reliable execution, high output capacity, and strong self-management skills.",
+                    "potential_challenge": "Difficulty disengaging from the 'execution mindset', occasionally viewing relaxation as a waste of time.",
+                    "actionable_insights": [
+                              "Schedule 'rest' as a formal, non-negotiable objective on your calendar to ensure it actually occurs.",
+                              "Audit your task list to ensure you are prioritizing high-impact work rather than just generating busywork."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Relentlessly driven by output and achievement, capable of sustaining massive workloads through sheer willpower.",
+                    "insight_social_personal": "Treats personal life and relationships as extensions of work, constantly seeking to optimize, fix, or improve them.",
+                    "everyday_operational_habits": "Operates at maximum capacity constantly, viewing any unutilized time as a failure of discipline.",
+                    "key_strength": "Unparalleled capacity to overcome obstacles and achieve complex, long-term goals through sustained effort.",
+                    "potential_challenge": "Severe risk of burnout, workaholism, and alienating peers who cannot match the required tempo.",
+                    "actionable_insights": [
+                              "Define 'completion' clearly for every task to prevent endless, unnecessary iterations and polish.",
+                              "Implement strict 'shut-down' routines at the end of the day to physically and mentally detach from the work environment."
+                    ]
+          }
+},
+        "orderliness": {
+          "very_low": {
+                    "insight_professional": "Operates comfortably in total chaos, completely ignoring established protocols, filing systems, or structural rules.",
+                    "insight_social_personal": "Maintains a highly disorganized personal environment, frustrating partners who require predictability or tidiness.",
+                    "everyday_operational_habits": "Lives entirely in the present, addressing needs as they arise with zero anticipatory organization or routine.",
+                    "key_strength": "Extreme adaptability and complete immunity to the stress caused by changing plans or messy environments.",
+                    "potential_challenge": "Constant loss of time and resources due to misplaced items, forgotten details, and systemic inefficiency.",
+                    "actionable_insights": [
+                              "Outsource all administrative and organizational tasks to software or detail-oriented partners.",
+                              "Establish one single, non-negotiable physical location for critical items (keys, wallet, vital documents)."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Prioritizes forward momentum over perfect organization, maintaining only the minimum structure required to function.",
+                    "insight_social_personal": "Tolerates significant clutter and ambiguity, preferring flexibility over rigid household routines.",
+                    "everyday_operational_habits": "Relies on memory and ad-hoc methods rather than formalized lists, calendars, or filing systems.",
+                    "key_strength": "Agility in fast-changing environments where rigid plans would immediately become obsolete.",
+                    "potential_challenge": "Periodic crises caused by overlooking small but critical administrative details.",
+                    "actionable_insights": [
+                              "Schedule a weekly 'purge and reset' hour to prevent minor disorder from accumulating into a major blockage.",
+                              "Adopt minimalist workflows: Use the simplest possible tool (like a single text file) rather than complex organizational software."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Maintains functional systems that support the work without becoming a slave to the process itself.",
+                    "insight_social_personal": "Keeps a reasonably tidy environment and schedule, but easily abandons the routine for spontaneous opportunities.",
+                    "everyday_operational_habits": "Utilizes standard organizational tools effectively, letting them slide during busy periods and resetting when time allows.",
+                    "key_strength": "Pragmatic organization that serves the objective rather than dictating it.",
+                    "potential_challenge": "Systemic degradation during extended periods of high stress, requiring significant effort to rebuild the baseline.",
+                    "actionable_insights": [
+                              "Identify the specific organizational habits that yield the highest return on your time, and ruthlessly abandon the rest.",
+                              "Designate specific zones (physical or digital) that must remain perfectly ordered, while allowing chaos in less critical areas."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Relies heavily on structured processes, detailed planning, and pristine organization to drive efficiency.",
+                    "insight_social_personal": "Maintains a highly regulated household and schedule, viewing order as a prerequisite for relaxation.",
+                    "everyday_operational_habits": "Operates strictly via lists, calendars, and established routines, finding comfort in predictability.",
+                    "key_strength": "Creating highly reliable, error-free environments that allow for smooth, predictable execution.",
+                    "potential_challenge": "Experiencing disproportionate stress when forced to operate outside of established routines or in messy environments.",
+                    "actionable_insights": [
+                              "Practice 'flexible compliance': Identify scenarios where adhering to the plan is actually less efficient than adapting to the new reality.",
+                              "Communicate your need for order as a personal operational requirement, rather than a moral standard others must meet."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Demands absolute precision and rigid adherence to protocol, prioritizing perfect order over speed or adaptability.",
+                    "insight_social_personal": "Imposes intense structural requirements on partners and environments, experiencing severe distress if rules are broken.",
+                    "everyday_operational_habits": "Life is heavily ritualized. Every item has a specific place, and every hour is meticulously scheduled.",
+                    "key_strength": "Flawless execution of complex logistical systems requiring zero tolerance for error.",
+                    "potential_challenge": "Crippling perfectionism, micromanagement, and an inability to function when the environment cannot be controlled.",
+                    "actionable_insights": [
+                              "Differentiate between 'critical order' (e.g., safety protocols) and 'aesthetic order' (e.g., desk alignment), learning to let the latter go.",
+                              "Intentionally introduce minor disruptions into your routine to slowly build a tolerance for unpredictability."
+                    ]
+          }
+},
+        "enthusiasm": {
+          "very_low": {
+                    "insight_professional": "Maintains a flat, unexpressive demeanor, engaging with work strictly on a transactional and factual basis.",
+                    "insight_social_personal": "Highly reserved and difficult to engage, showing minimal visible reaction to positive events or social overtures.",
+                    "everyday_operational_habits": "Conserves energy aggressively, avoiding environments or interactions that require emotional performance.",
+                    "key_strength": "Immunity to hype, maintaining total objectivity and resisting emotionally driven decision-making.",
+                    "potential_challenge": "Being perceived as hostile, depressed, or entirely disengaged, which alienates peers and limits collaboration.",
+                    "actionable_insights": [
+                              "Explicitly verbalize your approval or agreement, as your lack of nonverbal enthusiasm will be misread as disapproval.",
+                              "Identify one or two trusted colleagues to act as your proxy for team morale and relationship-building."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Communicates efficiently and seriously, participating in team culture only when necessary for the objective.",
+                    "insight_social_personal": "Warms up to others very slowly, requiring time and established trust before displaying genuine emotion.",
+                    "everyday_operational_habits": "Prefers solitary or low-key activities, finding highly expressive or energetic environments fatiguing.",
+                    "key_strength": "Providing a calm, stabilizing presence that naturally defuses manic or overly emotional group dynamics.",
+                    "potential_challenge": "Failing to project enough energy to lead initiatives or rally a team during critical pushes.",
+                    "actionable_insights": [
+                              "Deploy 'strategic enthusiasm' during key moments (kickoffs, project completions) to align with team expectations.",
+                              "Communicate your default state to close partners so they do not interpret your calm demeanor as boredom."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Displays appropriate energy and engagement based on the situation, rallying when needed but defaulting to a calm baseline.",
+                    "insight_social_personal": "Enjoys social interaction and shared positive experiences, but does not rely on them for daily motivation.",
+                    "everyday_operational_habits": "Modulates energy levels effectively, engaging in team dynamics without burning out.",
+                    "key_strength": "Adaptability in both high-energy celebrations and serious, focused work environments.",
+                    "potential_challenge": "May struggle to sustain momentum if placed in a role that demands constant, high-octane emotional performance.",
+                    "actionable_insights": [
+                              "Protect your baseline by scheduling quiet recovery periods immediately following high-energy events.",
+                              "Use your calibrated energy to bridge the gap between highly expressive and highly reserved team members."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Radiates positive energy and optimism, naturally elevating team morale and accelerating project momentum through verbal encouragement.",
+                    "insight_social_personal": "Warm, engaging, and quick to form connections. Readily shares positive emotions and seeks out shared experiences.",
+                    "everyday_operational_habits": "Thrives on interpersonal contact, using social interactions throughout the day to generate energy and focus.",
+                    "key_strength": "Building rapid rapport, fostering team cohesion, and generating buy-in for new initiatives.",
+                    "potential_challenge": "Allowing optimism to obscure genuine risks, or exhausting quieter team members with relentless positivity.",
+                    "actionable_insights": [
+                              "Ensure your enthusiasm does not invalidate the concerns of peers who are attempting to highlight project risks.",
+                              "Calibrate your energy output to match the tone of the room, especially during serious or highly technical discussions."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Operates with intense, constant emotional expression and extreme optimism, requiring high visibility and continuous positive feedback.",
+                    "insight_social_personal": "Highly exuberant and hyper-social, dominating the emotional tone of relationships and demanding high levels of engagement.",
+                    "everyday_operational_habits": "Requires constant external stimulation and social interaction to function; silence and isolation cause rapid demotivation.",
+                    "key_strength": "Unmatched ability to generate excitement, persuade large groups, and inject massive momentum into stagnant environments.",
+                    "potential_challenge": "Over-promising due to temporary excitement, lacking follow-through, and overwhelming introverted partners.",
+                    "actionable_insights": [
+                              "Implement a 'cooling off' period before committing to any project or social event proposed while you are in a state of high excitement.",
+                              "Actively practice lowering your volume and physical tempo to allow others space to enter the dynamic."
+                    ]
+          }
+},
+        "assertiveness": {
+          "very_low": {
+                    "insight_professional": "Entirely passive in group settings, yielding to the direction of others and actively avoiding leadership roles or confrontation.",
+                    "insight_social_personal": "Submits to the preferences of partners or friends constantly, struggling to articulate personal desires or set boundaries.",
+                    "everyday_operational_habits": "Operates strictly in the background, executing assigned tasks while minimizing visibility and responsibility.",
+                    "key_strength": "Absolute compliance and willingness to support the objectives of dominant leaders without friction.",
+                    "potential_challenge": "Becoming a target for exploitation, harboring deep unspoken resentment, and failing to advocate for basic needs.",
+                    "actionable_insights": [
+                              "Use written communication (email, shared docs) to state your requirements, bypassing the intimidation of verbal confrontation.",
+                              "Designate specific, low-stakes decisions (e.g., where to eat) where you mandate that your preference must dictate the outcome."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Prefers supportive or advisory roles. Will offer input if specifically asked, but rarely interrupts or seizes control of the group.",
+                    "insight_social_personal": "Accommodating and easygoing, generally content to let others dictate the pace and direction of the relationship.",
+                    "everyday_operational_habits": "Focuses on execution rather than direction, functioning best when the hierarchy and objectives are clearly defined by someone else.",
+                    "key_strength": "Facilitating group harmony and executing reliably without requiring ego validation or control.",
+                    "potential_challenge": "Allowing flawed decisions to proceed simply because you were unwilling to aggressively interrupt and correct the leader.",
+                    "actionable_insights": [
+                              "Frame your assertions as questions (e.g., 'Have we considered X?') to insert your perspective without feeling combative.",
+                              "Pre-arrange with a more assertive colleague to back up your points during critical meetings."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Capable of taking charge when necessary, but equally comfortable stepping back and letting others lead.",
+                    "insight_social_personal": "Communicates needs clearly without attempting to dominate the relationship, maintaining an equitable balance of power.",
+                    "everyday_operational_habits": "Adjusts posture based on context, asserting authority when expertise is required and yielding when it is not.",
+                    "key_strength": "Flexible leadership that empowers others while maintaining the capacity to enforce standards.",
+                    "potential_challenge": "May lack the overwhelming forceful presence required to rapidly take control of a highly chaotic or resistant group.",
+                    "actionable_insights": [
+                              "Consciously identify when a situation requires 'peacetime' collaborative leadership versus 'wartime' dictatorial command.",
+                              "Ensure you are not defaulting to passivity simply because another assertive personality has entered the room."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Naturally assumes control of ambiguous situations, driving decisions forward and comfortably holding others accountable.",
+                    "insight_social_personal": "Takes the lead in relationships, initiating action, setting the agenda, and communicating expectations directly.",
+                    "everyday_operational_habits": "Operates with a decisive tempo, preferring to dictate the terms of engagement rather than waiting for instructions.",
+                    "key_strength": "Catalyzing action, enforcing standards, and navigating conflict without hesitation.",
+                    "potential_challenge": "Inadvertently silencing quieter team members and monopolizing the decision-making process.",
+                    "actionable_insights": [
+                              "Adopt the 'speak last' rule in meetings to force yourself to synthesize the group's input rather than dictating the outcome.",
+                              "Regularly delegate decision-making authority on specific tasks, expressly forbidding yourself from overriding the outcome."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Fiercely dominant and highly confrontational. Demands absolute control and aggressively steamrolls opposition to achieve objectives.",
+                    "insight_social_personal": "Overwhelmingly forceful in relationships, dictating terms and requiring partners who can either withstand or submit to constant intensity.",
+                    "everyday_operational_habits": "Views all interactions through a lens of power and leverage, constantly asserting dominance over the environment.",
+                    "key_strength": "Unstoppable drive and the ability to force compliance and execution in the most resistant environments.",
+                    "potential_challenge": "Creating toxic cultures, alienating highly competent peers, and suffering from catastrophic blind spots because subordinates are too intimidated to warn you.",
+                    "actionable_insights": [
+                              "Appoint an 'integrator'—a highly trusted, blunt second-in-command who is explicitly authorized to tell you when you are wrong.",
+                              "Evaluate your success not just on the objective achieved, but on the relational collateral damage incurred to achieve it."
+                    ]
+          }
+},
+        "intellect": {
+          "very_low": {
+                    "insight_professional": "Rejects abstract reasoning entirely, demanding concrete, literal instructions and focusing exclusively on immediate physical execution.",
+                    "insight_social_personal": "Displays zero interest in philosophical, political, or theoretical discussions, engaging only with tangible, immediate realities.",
+                    "everyday_operational_habits": "Operates strictly via repetition and established manual processes, avoiding any task that requires conceptual problem-solving.",
+                    "key_strength": "Absolute grounding in reality and a willingness to perform highly repetitive, literal tasks without boredom.",
+                    "potential_challenge": "Complete inability to navigate conceptual ambiguity or adapt to new systems that require abstract comprehension.",
+                    "actionable_insights": [
+                              "Translate all new concepts into direct physical actions or step-by-step literal checklists.",
+                              "Avoid roles requiring strategic planning; focus on execution, logistics, and maintenance."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Prefers straightforward problem-solving over complex theoretical analysis. Values the 'how' much more than the 'why'.",
+                    "insight_social_personal": "Engages in practical conversations regarding daily life, hobbies, or events, rather than debating abstract ideas.",
+                    "everyday_operational_habits": "Learns best through hands-on practice rather than reading manuals or theoretical models.",
+                    "key_strength": "Rapid, pragmatic execution without getting bogged down in unnecessary intellectualization.",
+                    "potential_challenge": "May struggle to synthesize broad patterns from disparate data points, missing the larger strategic picture.",
+                    "actionable_insights": [
+                              "When forced to engage with abstract strategy, ask for specific historical examples to ground the concept in reality.",
+                              "Partner with strategic thinkers to handle the conceptual mapping while you manage the practical implementation."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Capable of engaging with complex theories when necessary, but quickly pivots to practical application.",
+                    "insight_social_personal": "Enjoys intellectual conversations in moderation, but remains equally comfortable discussing practical, everyday matters.",
+                    "everyday_operational_habits": "Balances time between conceptualizing solutions and actually executing them.",
+                    "key_strength": "Bridging the gap between highly theoretical planners and strictly literal operators.",
+                    "potential_challenge": "May lack the extreme conceptual depth required for pure research or the extreme patience required for pure rote execution.",
+                    "actionable_insights": [
+                              "Use your balanced processing speed to translate complex strategies into actionable steps for the rest of the team.",
+                              "Allocate specific time to deep-dive into complex topics to ensure your conceptual skills do not atrophy."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Highly analytical and quick to grasp complex, abstract systems. Excels at identifying underlying patterns in chaotic data.",
+                    "insight_social_personal": "Seeks out intellectually stimulating environments and conversations, often bonding over shared ideas rather than shared activities.",
+                    "everyday_operational_habits": "Approaches daily life as a series of problems to be optimized and understood conceptually.",
+                    "key_strength": "Rapid synthesis of complex information and the ability to formulate sophisticated strategic models.",
+                    "potential_challenge": "Tendency to over-complicate simple problems by intellectualizing them rather than just executing the obvious solution.",
+                    "actionable_insights": [
+                              "Apply the principle of 'Occam's Razor': consciously force yourself to select the simplest workable solution before exploring complex alternatives.",
+                              "Ensure you allocate sufficient time to actual implementation, rather than just endlessly refining the theoretical model."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Operates almost entirely in the realm of high-level abstraction, thriving on philosophical, theoretical, and highly complex logical puzzles.",
+                    "insight_social_personal": "Requires intense intellectual engagement in relationships. Experiences profound boredom if conversations remain on literal or mundane topics.",
+                    "everyday_operational_habits": "Constantly consumes complex information, analyzing systems and theories, often at the expense of practical daily functioning.",
+                    "key_strength": "Unmatched capacity for deep, theoretical breakthroughs, lateral thinking, and systemic analysis.",
+                    "potential_challenge": "Total detachment from practical reality, intellectual arrogance, and an inability to communicate ideas in an accessible manner.",
+                    "actionable_insights": [
+                              "Practice the 'Feynman Technique': force yourself to explain your most complex theories using only language a 10-year-old would understand.",
+                              "Delegate the literal execution of your ideas entirely, as your natural aversion to mundane details will guarantee failure during implementation."
+                    ]
+          }
+},
+        "openness_aspect": {
+          "very_low": {
+                    "insight_professional": "Displays absolute reliance on convention, completely rejecting new methodologies, aesthetic changes, or unconventional approaches.",
+                    "insight_social_personal": "Adheres strictly to traditional lifestyles. Displays zero interest in art, diverse cultures, or novel experiences.",
+                    "everyday_operational_habits": "Maintains highly rigid routines and environments, finding comfort exclusively in the familiar and the proven.",
+                    "key_strength": "Unshakable stability and the preservation of functional traditions against unnecessary disruption.",
+                    "potential_challenge": "Extreme rigidity leading to obsolescence, and an inability to adapt when the external environment fundamentally changes.",
+                    "actionable_insights": [
+                              "Treat necessary updates (like new software) as mandatory maintenance rather than optional 'new experiences'.",
+                              "Recognize that refusing to adapt to a changing environment is, practically speaking, a decision to fail."
+                    ]
+          },
+          "moderate_low": {
+                    "insight_professional": "Prefers established practices and requires overwhelming evidence of utility before adopting a new tool or creative approach.",
+                    "insight_social_personal": "Enjoys familiar entertainment and routines. Occasional openness to new experiences if guided by a trusted partner.",
+                    "everyday_operational_habits": "Focuses on function over form. Unconcerned with aesthetics, optimizing life for practical utility.",
+                    "key_strength": "Efficiency, reliability, and immunity to passing trends or superficial fads.",
+                    "potential_challenge": "Dismissing creative or aesthetic improvements that could actually increase morale or usability.",
+                    "actionable_insights": [
+                              "When a creative change is proposed, evaluate it specifically on its potential to improve workflow, separating the utility from the 'novelty'.",
+                              "Allow trusted peers to occasionally dictate new approaches to prevent your routines from becoming entirely stagnant."
+                    ]
+          },
+          "balanced": {
+                    "insight_professional": "Appreciates innovation and aesthetic design, but tempers creative impulses with a demand for practical application.",
+                    "insight_social_personal": "Enjoys a mix of traditional routines and new cultural experiences, appreciating art without being consumed by it.",
+                    "everyday_operational_habits": "Maintains functional systems but occasionally updates them for the sake of variety or minor optimization.",
+                    "key_strength": "Integrating novel, creative ideas into existing, practical frameworks.",
+                    "potential_challenge": "May lack the extreme dedication required to master a purely creative discipline or the strict discipline for pure routine.",
+                    "actionable_insights": [
+                              "Use your balanced perspective to act as an editor, refining the wild ideas of high-openness peers into usable products.",
+                              "Intentionally dedicate specific blocks of time to either pure creative exploration or pure routine execution."
+                    ]
+          },
+          "moderate_high": {
+                    "insight_professional": "Highly receptive to unconventional solutions and aesthetic excellence. Drives innovation and challenges standard operating procedures.",
+                    "insight_social_personal": "Curious, culturally engaged, and aesthetically sensitive. Seeks out novel experiences, travel, and artistic expression.",
+                    "everyday_operational_habits": "Frequently alters routines, environments, and workflows to maintain a sense of freshness and inspiration.",
+                    "key_strength": "Continuous generation of fresh perspectives and the ability to see aesthetic and conceptual connections others miss.",
+                    "potential_challenge": "Abandoning functional systems simply because they feel 'boring', leading to unnecessary instability.",
+                    "actionable_insights": [
+                              "Before changing a functional system, clearly articulate what specific problem the new, novel approach will solve.",
+                              "Channel your need for novelty into specific, contained hobbies or brainstorming sessions rather than disrupting core operations."
+                    ]
+          },
+          "very_high": {
+                    "insight_professional": "Operates entirely outside of convention, prioritizing radical innovation, aesthetic perfection, and constant disruption of the status quo.",
+                    "insight_social_personal": "Experiences life as an ongoing artistic or exploratory project. Requires constant exposure to diverse, novel, and profound experiences.",
+                    "everyday_operational_habits": "Rejects routine entirely. Life is characterized by fluidity, shifting passions, and a highly curated aesthetic environment.",
+                    "key_strength": "Visionary creativity, paradigm-shifting innovation, and profound aesthetic intuition.",
+                    "potential_challenge": "Total inability to tolerate routine maintenance, leading to chronic instability and a lack of grounding in practical reality.",
+                    "actionable_insights": [
+                              "Acknowledge that true mastery of any creative field eventually requires tedious, repetitive practice (routine).",
+                              "Partner with highly grounded, low-openness individuals to handle the administrative reality of your life and work."
+                    ]
+          }
+},
         "neuroticism": {
             "very_low": {
                 "insight_professional": "You exhibit extreme emotional detachment under pressure, remaining highly operational and objective during workplace crises.",
