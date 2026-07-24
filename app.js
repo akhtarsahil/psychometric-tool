@@ -367,22 +367,33 @@ let normativeData = {
         },
 
         renderPaginationControls: function () {
-            const container = document.getElementById('pagination-controls');
-            if (!container) return;
+            const indicator = document.getElementById('page-indicator');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const submitBtn = document.getElementById('submit-btn');
+
+            if (!indicator) return;
 
             const totalPages = Math.ceil(this.surveyItems.length / this.pageSize);
-            let html = `
-                <button type="button" class="btn secondary" onclick="app.previousPage()" ${this.currentPage === 0 ? 'disabled' : ''}>Previous</button>
-                <span class="page-indicator">Page ${this.currentPage + 1} of ${totalPages}</span>
-            `;
+            indicator.textContent = `Page ${this.currentPage + 1} of ${totalPages}`;
 
-            if (this.currentPage === totalPages - 1) {
-                html += `<button type="button" class="btn primary" onclick="app.submitSurvey()">Submit Survey</button>`;
-            } else {
-                html += `<button type="button" class="btn primary" onclick="app.nextPage()">Next</button>`;
+            // Toggle Previous Button
+            if (prevBtn) {
+                if (this.currentPage === 0) {
+                    prevBtn.classList.add('hidden');
+                } else {
+                    prevBtn.classList.remove('hidden');
+                }
             }
 
-            container.innerHTML = html;
+            // Toggle Next / Submit Buttons
+            if (this.currentPage === totalPages - 1) {
+                if (nextBtn) nextBtn.classList.add('hidden');
+                if (submitBtn) submitBtn.classList.remove('hidden');
+            } else {
+                if (nextBtn) nextBtn.classList.remove('hidden');
+                if (submitBtn) submitBtn.classList.add('hidden');
+            }
         },
 
         updateProgress: function () {
